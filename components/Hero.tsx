@@ -1,4 +1,5 @@
 import Button from "./ui/Button";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -13,7 +14,7 @@ const Hero = () => {
             PRECISION FLOORING & CONTRACTING SERVICES
           </h1>
           <p className="text-secondary-light mb-8 max-w-lg">
-            Precision Flooring & Contracting is a premier home service company
+            <span className="font-bold">Precision Flooring & Contracting</span> is a premier home service company
             specializing in comprehensive renovation and maintenance services.
             We transform your home with expert flooring installations, custom
             painting, and full-scale makeovers.
@@ -31,9 +32,13 @@ const Hero = () => {
         {/* Hero Image */}
         <div className="md:w-1/2 relative rounded-full overflow-hidden">
           <div className="aspect-ratio-1 bg-gray-200 rounded-full overflow-hidden h-72 w-72 md:h-96 md:w-96 mx-auto relative">
-            <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-              Placeholder for hero image
-            </div>
+            <Image
+              src="/images/pfclogo.jpg"
+              alt="PRECISION FLOORING & CONTRACTING SERVICES IN OTTAWA"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </div>

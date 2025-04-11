@@ -21,7 +21,7 @@ const Button = ({
   const variantStyles = {
     primary: "btn btn-primary text-white",
     secondary:
-      "btn border-2 border-secondary text-secondary hover:bg-[#bd5d18] hover:text-white",
+      "btn border-2 border-secondary text-secondary hover:bg-primary hover:text-white",
   };
 
   const buttonStyles = `${baseStyles} ${variantStyles[variant]} ${className}`;
