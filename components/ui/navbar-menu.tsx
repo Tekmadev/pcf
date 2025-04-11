@@ -191,14 +191,16 @@ export const BlogPostItem = ({
   description,
   href,
   src,
+  date,
 }: {
   title: string;
   description: string;
   href: string;
   src: string;
+  date: string;
 }) => {
   return (
-    <Link href={href} className="flex space-x-3 group">
+    <Link href={`/blog/${href}`} className="flex space-x-3 group">
       <div className="w-16 h-16 relative rounded-md overflow-hidden flex-shrink-0">
         <Image
           src={src}
@@ -213,6 +215,9 @@ export const BlogPostItem = ({
         </h4>
         <p className="text-xs text-secondary-light line-clamp-2">
           {description}
+        </p>
+        <p className="text-xs text-secondary-light">
+          {new Date(date).toLocaleDateString()}
         </p>
       </div>
     </Link>

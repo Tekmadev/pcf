@@ -14,6 +14,7 @@ import {
   CategorySection,
   BlogPostItem,
 } from "./ui/navbar-menu";
+import { getRecentPosts } from "@/data/blog";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,30 +41,7 @@ const Navigation = () => {
     return acc;
   }, {} as Record<string, typeof services>);
 
-  // Sample blog posts - replace with real data when available
-  const blogPosts = [
-    {
-      title: "How to Maintain Your Hardwood Flooring",
-      description:
-        "Learn the best practices for keeping your hardwood floors looking beautiful for years to come.",
-      href: "/blog/maintain-hardwood-flooring",
-      src: "/images/pfclogo.jpg",
-    },
-    {
-      title: "Why Professional Paver Sealing Matters",
-      description:
-        "Discover the benefits of professional paver sealing and how it extends the life of your outdoor surfaces.",
-      href: "/blog/paver-sealing-benefits",
-      src: "/images/pfclogo.jpg",
-    },
-    {
-      title: "Spring Cleaning: Refresh Your Home's Surfaces",
-      description:
-        "Get your home ready for spring with these professional cleaning tips from our experts.",
-      href: "/blog/spring-cleaning-tips",
-      src: "/images/pfclogo.jpg",
-    },
-  ];
+  const recentPosts = getRecentPosts(3);
 
   const handleSetActive = (item: string | null) => {
     setActiveItem(item);
@@ -191,13 +169,14 @@ const Navigation = () => {
                         Recent Posts
                       </h3>
                       <div className="space-y-4">
-                        {blogPosts.map((post, index) => (
+                        {recentPosts.map((post, index) => (
                           <BlogPostItem
                             key={index}
                             title={post.title}
                             description={post.description}
-                            href={post.href}
-                            src={post.src}
+                            href={post.id}
+                            src={post.image}
+                            date={post.date}
                           />
                         ))}
                       </div>
@@ -382,16 +361,16 @@ const Navigation = () => {
                               Recent Posts
                             </h4>
                             <div className="space-y-4">
-                              {blogPosts.map((post, index) => (
+                              {recentPosts.map((post, index) => (
                                 <Link
                                   key={index}
-                                  href={post.href}
+                                  href={`/blog/${post.id}`}
                                   className="flex space-x-3 group py-1"
                                   onClick={() => setIsMenuOpen(false)}
                                 >
                                   <div className="w-12 h-12 relative rounded-md overflow-hidden flex-shrink-0">
                                     <Image
-                                      src={post.src}
+                                      src={post.image}
                                       fill
                                       alt={post.title}
                                       className="object-cover"

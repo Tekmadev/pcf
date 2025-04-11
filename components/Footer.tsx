@@ -6,9 +6,11 @@ import { FormEvent, useState } from "react";
 import FooterLink from "./ui/FooterLink";
 import { quickLinks } from "../data/footerLinks";
 import { services } from "../data/services";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
+  const pathname = usePathname();
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -86,7 +88,18 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <FooterLink href={link.href}>{link.label}</FooterLink>
+                  <FooterLink
+                    href={link.href}
+                    className={
+                      pathname === link.href ||
+                      (link.href === "/services" &&
+                        pathname.includes("/services"))
+                        ? "text-[#d6781c]"
+                        : ""
+                    }
+                  >
+                    {link.label}
+                  </FooterLink>
                 </li>
               ))}
             </ul>
@@ -99,7 +112,11 @@ const Footer = () => {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3">
               {services.map((service) => (
-                <FooterLink key={service.href} href={service.href}>
+                <FooterLink
+                  key={service.href}
+                  href={service.href}
+                  className={pathname === service.href ? "text-[#d6781c]" : ""}
+                >
                   {service.label}
                 </FooterLink>
               ))}
@@ -141,6 +158,12 @@ const Footer = () => {
           <p className="text-secondary">
             &copy; {new Date().getFullYear()} Precision Flooring & Contracting.
             All rights reserved.
+          </p>
+          <p className="text-secondary mt-2">
+            Developed by{" "}
+            <a href="https://www.tekmadev.com" target="_blank" rel="noopener noreferrer">
+              Tekmadev
+            </a>
           </p>
         </div>
       </div>

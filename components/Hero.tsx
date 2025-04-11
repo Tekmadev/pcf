@@ -32,9 +32,9 @@ const Hero = () => {
 
         {/* Hero Image */}
         <div className="md:w-1/2 relative rounded-full overflow-hidden">
-          <div className="aspect-ratio-1 bg-gray-200 rounded-full overflow-hidden h-72 w-72 md:h-96 md:w-96 mx-auto relative">
+          <div className="aspect-ratio-1 bg-gray-200 rounded-full overflow-hidden h-72 w-72 md:h-106 md:w-106 mx-auto relative">
             <Image
-              src="/images/pfclogo.jpg"
+              src="/images/stockPics/flooring1.webp"
               alt="PRECISION FLOORING & CONTRACTING SERVICES IN OTTAWA"
               fill
               className="object-cover"
