@@ -9,7 +9,7 @@ type FooterLinkProps = {
 
 const FooterLink = ({ href, children, className = "" }: FooterLinkProps) => {
   const baseStyles =
-    "text-secondary hover:text-primary hover:translate-x-1 transition-all duration-300 inline-block font-medium";
+    "text-secondary hover:text-[#d6781c] hover:translate-x-1 transition-all duration-300 inline-block font-medium";
   const linkStyles = `${baseStyles} ${className}`;
 
   return (

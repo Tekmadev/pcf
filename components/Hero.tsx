@@ -4,7 +4,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <section className="relative bg-background-dark py-20 md:py-28">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10">
         {/* Hero Content */}
         <div className="md:w-1/2 mb-10 md:mb-0">
           <h2 className="text-primary uppercase tracking-wider text-sm md:text-base font-medium mb-3">
@@ -14,13 +14,14 @@ const Hero = () => {
             PRECISION FLOORING & CONTRACTING SERVICES
           </h1>
           <p className="text-secondary-light mb-8 max-w-lg">
-            <span className="font-bold">Precision Flooring & Contracting</span> is a premier home service company
-            specializing in comprehensive renovation and maintenance services.
-            We transform your home with expert flooring installations, custom
-            painting, and full-scale makeovers.
+            <span className="font-bold">Precision Flooring & Contracting</span>{" "}
+            is a premier home service company specializing in comprehensive
+            renovation and maintenance services. We transform your home with
+            expert flooring installations, custom painting, and full-scale
+            makeovers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button href="/contact" variant="primary">
+            <Button href="tel:+16138211111" variant="primary">
               CALL US
             </Button>
             <Button href="/contact" variant="secondary">

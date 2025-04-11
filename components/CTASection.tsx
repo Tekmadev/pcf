@@ -20,7 +20,7 @@ const CTASection = () => {
               <Button
                 href="/contact"
                 variant="primary"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-md shadow-md"
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-md bg-[#d6781c] hover:bg-[#c2410c] shadow-md"
               >
                 BOOK NOW
               </Button>
@@ -28,7 +28,7 @@ const CTASection = () => {
 
             <div className="col-span-1 flex flex-col md:items-end">
               <div className="flex items-center justify-start md:justify-end mb-2">
-                <div className="bg-primary rounded-full p-3 mr-4">
+                <div className="bg-[#d6781c] rounded-full p-3 mr-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6 text-white"
@@ -50,7 +50,7 @@ const CTASection = () => {
                   </p>
                   <a
                     href="tel:+16133025268"
-                    className="text-xl font-bold text-primary hover:text-primary-dark"
+                    className="text-xl font-bold text-[#d6781c] hover:text-[#c2410c]"
                   >
                     +1 613-302-5268
                   </a>

@@ -80,7 +80,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="col-span-1">
-            <h3 className="text-xl font-semibold mb-6 relative after:absolute after:content-[''] after:w-12 after:h-1 after:bg-primary after:bottom-0 after:left-0 pb-3">
+            <h3 className="text-xl font-semibold mb-6 relative after:absolute after:content-[''] after:w-12 after:h-1 after:bg-[#d6781c] after:bottom-0 after:left-0 pb-3">
               Our Links
             </h3>
             <ul className="space-y-3">
@@ -94,7 +94,7 @@ const Footer = () => {
 
           {/* Services */}
           <div className="col-span-1">
-            <h3 className="text-xl font-semibold mb-6 relative after:absolute after:content-[''] after:w-12 after:h-1 after:bg-primary after:bottom-0 after:left-0 pb-3">
+            <h3 className="text-xl font-semibold mb-6 relative after:absolute after:content-[''] after:w-12 after:h-1 after:bg-[#d6781c] after:bottom-0 after:left-0 pb-3">
               Our Services
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3">
@@ -108,7 +108,7 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div className="col-span-1">
-            <h3 className="text-xl font-semibold mb-6 relative after:absolute after:content-[''] after:w-12 after:h-1 after:bg-primary after:bottom-0 after:left-0 pb-3">
+            <h3 className="text-xl font-semibold mb-6 relative after:absolute after:content-[''] after:w-12 after:h-1 after:bg-[#d6781c] after:bottom-0 after:left-0 pb-3">
               Newsletter
             </h3>
             <p className="text-secondary mb-6">
@@ -120,7 +120,7 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-secondary"
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#d6781c] text-secondary"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -128,7 +128,7 @@ const Footer = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-primary hover:bg-primary-dark text-white font-medium py-3 px-4 rounded-md transition-colors duration-300"
+                className="w-full bg-[#d6781c] hover:bg-[#c2410c] text-white font-medium py-3 px-4 rounded-md transition-colors duration-300"
               >
                 SUBSCRIBE
               </button>
