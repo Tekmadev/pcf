@@ -1,3 +1,115 @@
+# Precision Flooring & Contracting (PFC)
+
+## About the Business
+Precision Flooring & Contracting is your trusted partner for all home and commercial improvement needs in the Ottawa area. We specialize in a comprehensive range of professional services designed to enhance and maintain your property.
+
+## Contact Information
+- **Phone:** +1 613-302-5268
+- **Email:** precisioncontractinginfo@gmail.com
+- **Location:** Ottawa, ON, Canada
+
+## Our Services
+
+### Flooring Solutions
+- Laminate Flooring Installation
+- Hardwood Flooring Services
+- Vinyl Flooring Installation
+
+### Outdoor & Paver Services
+- Professional Pressure Washing
+- Paver Sealing & Maintenance
+- Uneven Paver Repair
+- Damaged Paver Restoration
+- Polymeric Sand Application
+
+### Professional Cleaning
+- Carpet Cleaning
+- Sofa Cleaning
+- Rug Cleaning
+- Steam Cleaning Services
+
+## Website Structure
+
+### Pages & Components
+
+1. **Homepage** (`/`)
+   - Hero section with main services
+   - Featured projects
+   - Service highlights
+   - Call-to-action sections
+   - Customer testimonials
+
+2. **About Us** (`/about`)
+   - Company history
+   - Mission and values
+   - Team introduction
+   - Certifications and credentials
+
+3. **Services** (`/services`)
+   - Main services overview
+   - Individual service pages:
+     - `/services/flooring`
+     - `/services/pressure-washing`
+     - `/services/paver-services`
+     - `/services/cleaning`
+
+4. **Gallery** (`/gallery`)
+   - Project showcase
+   - Before/After transformations
+   - Categorized portfolio
+
+5. **Blog** (`/blog`)
+   - Home improvement tips
+   - Maintenance guides
+   - Project highlights
+   - Industry news
+
+6. **Contact** (`/contact`)
+   - Contact form
+   - Location map
+   - Business hours
+   - Emergency contact information
+
+### Technical Stack
+- Next.js 14 (React Framework)
+- TypeScript
+- Tailwind CSS
+- SEO Optimization
+- Responsive Design
+- Modern UI Components
+
+### Key Features
+- Mobile-responsive design
+- Fast loading pages
+- SEO optimized content
+- Easy navigation
+- Online booking/consultation system
+- Image optimization
+- Contact forms
+- Social media integration
+
+## Development Guidelines
+- Maintain consistent branding
+- Ensure accessibility standards
+- Optimize for search engines
+- Regular performance monitoring
+- Mobile-first approach
+- Regular content updates
+
+## SEO Focus Keywords
+- Pressure washing cleaning Ottawa
+- Sealing pavers Ottawa
+- Laminate flooring Ottawa
+- Hardwood flooring Ottawa
+- Vinyl flooring Ottawa
+- Uneven pavers Ottawa
+- Damaged pavers Ottawa
+- Polymeric sand Ottawa
+- Carpet cleaning Ottawa
+- Sofa cleaning Ottawa
+- Rug cleaning Ottawa
+- Steam cleaning Ottawa
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
