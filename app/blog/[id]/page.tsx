@@ -10,7 +10,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
-  const post = getPostById(params.id);
+  const resolvedParams = await params;
+  const post = getPostById(resolvedParams.id);
 
   if (!post) {
     return {
@@ -25,8 +26,13 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   };
 }
 
-export default function BlogPostPage({ params }: { params: { id: string } }) {
-  const post = getPostById(params.id);
+export default async function BlogPostPage({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const resolvedParams = await params;
+  const post = getPostById(resolvedParams.id);
 
   if (!post) {
     notFound();
