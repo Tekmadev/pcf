@@ -60,7 +60,7 @@ const ContactHeader = () => {
         {/* Social Media Icons */}
         <div className="flex items-center text-white space-x-3 py-1 sm:py-0">
           <a
-            href="https://www.facebook.com/"
+            href="https://www.facebook.com/profile.php?id=61574594093799&mibextid=wwXIfr&rdid=rW8udNbPNWWHpaKv&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CGnpAKZqv%2F%3Fmibextid%3DwwXIfr"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#3b5998] rounded-full w-8 h-8 flex items-center justify-center hover:opacity-80 transition-opacity"
@@ -75,7 +75,7 @@ const ContactHeader = () => {
             </div>
           </a>
 
-          <a
+          {/* <a
             href="https://www.instagram.com/"
             target="_blank"
             rel="noopener noreferrer"
@@ -89,7 +89,7 @@ const ContactHeader = () => {
                 />
               </svg>
             </div>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

@@ -6,12 +6,16 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build",
+    "deploy": "npm run export && firebase deploy",
+    "deployy": "rm -rf .next/ out/ && next build && firebase deploy --only hosting"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
+    "firebase": "^11.6.0",
     "motion": "^12.6.3",
     "next": "15.3.0",
     "react": "^19.0.0",

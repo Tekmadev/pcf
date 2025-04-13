@@ -1,33 +1,29 @@
-import { getServiceById, getServicesByCategory } from "@/data/services";
+import {
+  getServiceById,
+  getServicesByCategory,
+  services,
+} from "@/data/services";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-// Generate metadata for the page
-export async function generateMetadata({
-  params,
-}: {
-  params: { service_name: string };
-}) {
-  const service = getServiceById(params.service_name);
-
-  if (!service) {
-    return {
-      title: "Service Not Found | PFC",
-      description: "The requested service could not be found.",
-    };
-  }
-
-  return {
-    title: `${service.label} | PFC - Precision Flooring & Contracting`,
-    description: service.shortDescription,
-  };
+// Generate static params for all services
+export function generateStaticParams() {
+  return services.map((service) => ({
+    service_name: service.id,
+  }));
 }
+
+// Replace dynamic metadata with static metadata
+export const metadata = {
+  title: "Service | PFC - Precision Flooring & Contracting",
+  description: "Explore our professional flooring and contracting services.",
+};
 
 export default function ServicePage({
   params,
 }: {
-  params: { service_name: string };
+  params: any; // Changed from { service_name: string } to any
 }) {
   const service = getServiceById(params.service_name);
 

@@ -9,30 +9,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const resolvedParams = await params;
-  const post = getPostById(resolvedParams.id);
+export const metadata = {
+  title: "Blog Post | PFC Blog",
+  description: "Read our latest blog post about flooring and home improvement.",
+};
 
-  if (!post) {
-    return {
-      title: "Post Not Found | PFC Blog",
-      description: "The requested blog post could not be found.",
-    };
-  }
-
-  return {
-    title: `${post.title} | PFC Blog`,
-    description: post.description,
-  };
-}
-
-export default async function BlogPostPage({
-  params,
-}: {
-  params: { id: string };
-}) {
-  const resolvedParams = await params;
-  const post = getPostById(resolvedParams.id);
+export default function BlogPostPage({ params }: { params: any }) {
+  const post = getPostById(params.id);
 
   if (!post) {
     notFound();

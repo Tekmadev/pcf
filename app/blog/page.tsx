@@ -9,7 +9,7 @@ export const metadata = {
     "Expert insights, tips, and trends in flooring and home improvement from PFC professionals.",
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
   const featuredPost = blogPosts[0];
   const otherPosts = blogPosts.slice(1);
 
