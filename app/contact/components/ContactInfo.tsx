@@ -1,4 +1,9 @@
 import Link from "next/link";
+import {
+  businessProfile,
+  getPhoneLink,
+  getEmailLink,
+} from "@/data/businessProfile";
 
 export default function ContactInfo() {
   return (
@@ -8,7 +13,8 @@ export default function ContactInfo() {
       </h2>
 
       <div className="space-y-6">
-        <div className="flex items-start">
+        {/* Address ------------------------------------------------------------------------------ */}
+        {/* <div className="flex items-start">
           <div className="mr-4 text-[#d6781c]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -34,12 +40,14 @@ export default function ContactInfo() {
           <div>
             <h3 className="font-semibold text-secondary">Address</h3>
             <p className="text-secondary-light mt-1">
-              123 Main Street, <br />
-              Ottawa, ON K1A 0A1
+              {businessProfile.address.street}, <br />
+              {businessProfile.address.city}, {businessProfile.address.province}{" "}
+              {businessProfile.address.postalCode}
             </p>
           </div>
-        </div>
+        </div> */}
 
+        {/* Phone ------------------------------------------------------------------------------ */}
         <div className="flex items-start">
           <div className="mr-4 text-[#d6781c]">
             <svg
@@ -61,15 +69,16 @@ export default function ContactInfo() {
             <h3 className="font-semibold text-secondary">Phone</h3>
             <p className="text-secondary-light mt-1">
               <a
-                href="tel:+16135551234"
+                href={getPhoneLink()}
                 className="hover:text-[#d6781c] transition-colors"
               >
-                +1 (613) 555-1234
+                {businessProfile.phone.display}
               </a>
             </p>
           </div>
         </div>
 
+        {/* Email ------------------------------------------------------------------------------ */}
         <div className="flex items-start">
           <div className="mr-4 text-[#d6781c]">
             <svg
@@ -91,15 +100,16 @@ export default function ContactInfo() {
             <h3 className="font-semibold text-secondary">Email</h3>
             <p className="text-secondary-light mt-1">
               <a
-                href="mailto:precisioncontractinginfo@gmail.com"
+                href={getEmailLink()}
                 className="hover:text-[#d6781c] transition-colors break-words"
               >
-                precisioncontractinginfo@gmail.com
+                {businessProfile.email}
               </a>
             </p>
           </div>
         </div>
 
+        {/* Business Hours ------------------------------------------------------------------------------ */}
         <div className="flex items-start">
           <div className="mr-4 text-[#d6781c]">
             <svg
@@ -120,19 +130,20 @@ export default function ContactInfo() {
           <div>
             <h3 className="font-semibold text-secondary">Business Hours</h3>
             <div className="text-secondary-light mt-1 space-y-1">
-              <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-              <p>Saturday: 9:00 AM - 4:00 PM</p>
-              <p>Sunday: Closed</p>
+              <p>Monday - Friday: {businessProfile.hours.weekdays}</p>
+              <p>Saturday: {businessProfile.hours.saturday}</p>
+              <p>Sunday: {businessProfile.hours.sunday}</p>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Social Media Icons ------------------------------------------------------------------------------ */}
       <div className="mt-8">
         <h3 className="font-semibold text-secondary mb-3">Connect With Us</h3>
         <div className="flex space-x-4">
           <a
-            href="https://www.facebook.com/"
+            href={businessProfile.social.facebook}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#3b5998] rounded-full w-10 h-10 flex items-center justify-center hover:opacity-80 transition-opacity text-white"
@@ -149,7 +160,7 @@ export default function ContactInfo() {
             </svg>
           </a>
           <a
-            href="https://www.instagram.com/"
+            href={businessProfile.social.instagram}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#E1306C] rounded-full w-10 h-10 flex items-center justify-center hover:opacity-80 transition-opacity text-white"

@@ -16,10 +16,10 @@ export const navItems: NavItem[] = [
     label: "SERVICES",
     href: "/services",
   },
-  {
-    label: "GALLERY",
-    href: "/gallery",
-  },
+  // {
+  //   label: "GALLERY",
+  //   href: "/gallery",
+  // },
   {
     label: "BLOG",
     href: "/blog",

@@ -1,4 +1,5 @@
 import Button from "./ui/Button";
+import { getPhoneLink } from "@/data/businessProfile";
 
 const CallToAction = () => {
   return (
@@ -30,7 +31,7 @@ const CallToAction = () => {
               GET A FREE QUOTE
             </Button>
             <Button
-              href="tel:+16138211111"
+              href={getPhoneLink()}
               variant="secondary"
               className="border-white text-white hover:bg-white hover:text-[#d6781c] min-w-[200px]"
             >

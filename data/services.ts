@@ -14,6 +14,53 @@ export type Service = {
 
 export const services: Service[] = [
   {
+    id: "epoxy-flooring",
+    label: "Epoxy Flooring Ottawa",
+    href: "/services/epoxy-flooring",
+    category: "Flooring",
+    shortDescription:
+      "High-performance epoxy floor coatings for residential and commercial spaces.",
+    longDescription:
+      "Our epoxy flooring solutions provide durable, seamless, and visually stunning surfaces for garages, basements, commercial spaces, and more. We use premium industrial-grade epoxy resins that create a high-performance finish resistant to chemicals, stains, impacts, and heavy traffic.",
+    features: [
+      "Commercial-grade epoxy formulations",
+      "Customizable colors, patterns, and finishes",
+      "Non-slip texture options for safety",
+      "Self-leveling for perfectly smooth surfaces",
+      "Professional preparation and application techniques",
+    ],
+    benefits: [
+      "Exceptional durability lasting 10-20 years",
+      "Seamless and easy to clean hygienic surface",
+      "Resistant to chemicals, oil, and stains",
+      "Enhances brightness with light-reflective properties",
+      "Cost-effective compared to tile or other hard surfaces",
+    ],
+    image: "/images/services/epoxy-flooring.jpg",
+    gallery: [
+      "/images/services/epoxy-flooring-1.jpg",
+      "/images/services/epoxy-flooring-2.jpg",
+      "/images/services/epoxy-flooring-3.jpg",
+    ],
+    faqs: [
+      {
+        question: "How long does epoxy flooring take to install?",
+        answer:
+          "A typical epoxy floor installation takes 2-4 days, including proper surface preparation, application of multiple layers, and curing time.",
+      },
+      {
+        question: "Is epoxy flooring suitable for residential basements?",
+        answer:
+          "Yes, epoxy is an excellent choice for basements as it provides a moisture-resistant, durable surface that can help brighten the space and resist potential water issues.",
+      },
+      {
+        question: "How long will an epoxy floor last?",
+        answer:
+          "With proper installation and maintenance, residential epoxy floors typically last 10-20 years before needing reapplication, depending on traffic and use.",
+      },
+    ],
+  },
+  {
     id: "pressure-washing",
     label: "Pressure Washing Ottawa",
     href: "/services/pressure-washing",
@@ -414,11 +461,11 @@ export const services: Service[] = [
       "Improves indoor air quality",
       "Restores carpet appearance and texture",
     ],
-    image: "/images/services/carpet-cleaning.jpg",
+    image: "/images/services/carpet-cleaning.webp",
     gallery: [
-      "/images/services/carpet-cleaning-1.jpg",
-      "/images/services/carpet-cleaning-2.jpg",
-      "/images/services/carpet-cleaning-3.jpg",
+      "/images/services/carpet-cleaning-1.webp",
+      "/images/services/carpet-cleaning-2.webp",
+      "/images/services/carpet-cleaning-3.webp",
     ],
     faqs: [
       {

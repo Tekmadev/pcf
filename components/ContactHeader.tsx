@@ -1,5 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import {
+  businessProfile,
+  getPhoneLink,
+  getEmailLink,
+} from "@/data/businessProfile";
 
 const ContactHeader = () => {
   return (
@@ -24,10 +29,10 @@ const ContactHeader = () => {
               </svg>
             </div>
             <a
-              href="tel:+16133025268"
+              href={getPhoneLink()}
               className="text-sm hover:text-white hover:underline transition-colors"
             >
-              +1 613-302-5268
+              {businessProfile.phone.simple}
             </a>
           </div>
 
@@ -49,10 +54,10 @@ const ContactHeader = () => {
               </svg>
             </div>
             <a
-              href="mailto:precisioncontractinginfo@gmail.com"
+              href={getEmailLink()}
               className="text-sm hover:text-white hover:underline transition-colors"
             >
-              precisioncontractinginfo@gmail.com
+              {businessProfile.email}
             </a>
           </div>
         </div>
@@ -60,7 +65,7 @@ const ContactHeader = () => {
         {/* Social Media Icons */}
         <div className="flex items-center text-white space-x-3 py-1 sm:py-0">
           <a
-            href="https://www.facebook.com/profile.php?id=61574594093799&mibextid=wwXIfr&rdid=rW8udNbPNWWHpaKv&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CGnpAKZqv%2F%3Fmibextid%3DwwXIfr"
+            href={businessProfile.social.facebook}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#3b5998] rounded-full w-8 h-8 flex items-center justify-center hover:opacity-80 transition-opacity"
@@ -76,7 +81,7 @@ const ContactHeader = () => {
           </a>
 
           {/* <a
-            href="https://www.instagram.com/"
+            href={businessProfile.social.instagram}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-full w-8 h-8 flex items-center justify-center hover:opacity-80 transition-opacity"

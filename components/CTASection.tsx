@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "./ui/Button";
+import { businessProfile, getPhoneLink } from "@/data/businessProfile";
 
 const CTASection = () => {
   return (
@@ -27,7 +28,7 @@ const CTASection = () => {
             </div>
 
             <div className="col-span-1 flex flex-col md:items-end">
-              <a href="tel:+16133025268" className="flex justify-center">
+              <a href={getPhoneLink()} className="flex justify-center">
                 <div className="flex items-center justify-start md:justify-end mb-2">
                   <div className="bg-[#d6781c] rounded-full p-3 mr-4">
                     <svg
@@ -50,7 +51,7 @@ const CTASection = () => {
                       Call Now
                     </p>
                     <p className="text-xl font-bold text-[#d6781c] hover:text-[#c2410c]">
-                      +1 613-302-5268
+                      {businessProfile.phone.simple}
                     </p>
                   </div>
                 </div>

@@ -31,7 +31,7 @@ const Footer = () => {
               <Link href="/" className="inline-block">
                 <Image
                   src="/images/pfc.png"
-                  alt="PFC Logo"
+                  alt="PCF Logo"
                   width={150}
                   height={78}
                   className="mb-4"
@@ -161,7 +161,11 @@ const Footer = () => {
           </p>
           <p className="text-secondary mt-2">
             Developed by{" "}
-            <a href="https://www.tekmadev.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.tekmadev.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Tekmadev
             </a>
           </p>

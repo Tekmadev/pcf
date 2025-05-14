@@ -6,7 +6,7 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "Homeowner",
     content:
-      "PFC transformed our outdated living space into a modern oasis. Their attention to detail with our hardwood flooring installation was impeccable. The team was professional, punctual, and the results exceeded our expectations!",
+      "PCF transformed our outdated living space into a modern oasis. Their attention to detail with our hardwood flooring installation was impeccable. The team was professional, punctual, and the results exceeded our expectations!",
     image: "/images/stockPics/flooring1.webp",
   },
   {
@@ -14,7 +14,7 @@ const testimonials = [
     name: "Michael Thompson",
     role: "Property Manager",
     content:
-      "We've worked with many contractors over the years, but none have matched the quality and reliability of PFC. From tile installation to complete renovations, they consistently deliver superior results on time and within budget.",
+      "We've worked with many contractors over the years, but none have matched the quality and reliability of PCF. From tile installation to complete renovations, they consistently deliver superior results on time and within budget.",
     image: "/images/stockPics/flooring2.webp",
   },
   {
@@ -22,7 +22,7 @@ const testimonials = [
     name: "Jennifer Williams",
     role: "Interior Designer",
     content:
-      "As an interior designer, I need contractors who can execute my vision with precision. PFC is my go-to recommendation for clients. Their craftsmanship is unmatched, and they bring a level of expertise that elevates every project.",
+      "As an interior designer, I need contractors who can execute my vision with precision. PCF is my go-to recommendation for clients. Their craftsmanship is unmatched, and they bring a level of expertise that elevates every project.",
     image: "/images/stockPics/cleanroom.webp",
   },
 ];

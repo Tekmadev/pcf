@@ -4,9 +4,9 @@ import Link from "next/link";
 import { format } from "date-fns";
 
 export const metadata = {
-  title: "Blog | PFC - Precision Flooring & Contracting",
+  title: "Blog | PCF - Precision Flooring & Contracting",
   description:
-    "Expert insights, tips, and trends in flooring and home improvement from PFC professionals.",
+    "Expert insights, tips, and trends in flooring and home improvement from PCF professionals.",
 };
 
 export default async function BlogPage() {

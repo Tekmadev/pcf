@@ -35,7 +35,7 @@ export default function StorySection() {
               vision: to bring exceptional craftsmanship and uncompromising
               quality to every home improvement project in Ottawa. Founded by
               master craftsman Michael Thompson after 5 years in the industry,
-              PFC was born from the frustration of seeing too many projects
+              PCF was born from the frustration of seeing too many projects
               completed with shortcuts and compromises.
             </p>
 

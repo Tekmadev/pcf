@@ -106,7 +106,7 @@ const WhyChooseUs = () => {
           </h3>
           <div className="w-20 h-1 bg-[#d6781c] mx-auto mt-6"></div>
           <p className="max-w-2xl mx-auto mt-6 text-secondary-light">
-            At PFC, we're committed to delivering exceptional quality and
+            At PCF, we're committed to delivering exceptional quality and
             service that exceeds expectations. Here's why homeowners throughout
             Ottawa trust us with their most important projects.
           </p>

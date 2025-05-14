@@ -1,5 +1,6 @@
 import Button from "./ui/Button";
 import Image from "next/image";
+import { businessProfile, getPhoneLink } from "@/data/businessProfile";
 
 const Hero = () => {
   return (
@@ -21,7 +22,7 @@ const Hero = () => {
             makeovers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button href="tel:+16138211111" variant="primary">
+            <Button href={getPhoneLink()} variant="primary">
               CALL US
             </Button>
             <Button href="/contact" variant="secondary">

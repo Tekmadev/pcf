@@ -1,21 +1,25 @@
-# Precision Flooring & Contracting (PFC)
+# Precision Flooring & Contracting (PCF)
 
 ## About the Business
+
 Precision Flooring & Contracting is your trusted partner for all home and commercial improvement needs in the Ottawa area. We specialize in a comprehensive range of professional services designed to enhance and maintain your property.
 
 ## Contact Information
-- **Phone:** +1 613-302-5268
+
+- **Phone:** +1 613-914-6260
 - **Email:** precisioncontractinginfo@gmail.com
 - **Location:** Ottawa, ON, Canada
 
 ## Our Services
 
 ### Flooring Solutions
+
 - Laminate Flooring Installation
 - Hardwood Flooring Services
 - Vinyl Flooring Installation
 
 ### Outdoor & Paver Services
+
 - Professional Pressure Washing
 - Paver Sealing & Maintenance
 - Uneven Paver Repair
@@ -23,6 +27,7 @@ Precision Flooring & Contracting is your trusted partner for all home and commer
 - Polymeric Sand Application
 
 ### Professional Cleaning
+
 - Carpet Cleaning
 - Sofa Cleaning
 - Rug Cleaning
@@ -33,6 +38,7 @@ Precision Flooring & Contracting is your trusted partner for all home and commer
 ### Pages & Components
 
 1. **Homepage** (`/`)
+
    - Hero section with main services
    - Featured projects
    - Service highlights
@@ -40,12 +46,14 @@ Precision Flooring & Contracting is your trusted partner for all home and commer
    - Customer testimonials
 
 2. **About Us** (`/about`)
+
    - Company history
    - Mission and values
    - Team introduction
    - Certifications and credentials
 
 3. **Services** (`/services`)
+
    - Main services overview
    - Individual service pages:
      - `/services/flooring`
@@ -54,11 +62,13 @@ Precision Flooring & Contracting is your trusted partner for all home and commer
      - `/services/cleaning`
 
 4. **Gallery** (`/gallery`)
+
    - Project showcase
    - Before/After transformations
    - Categorized portfolio
 
 5. **Blog** (`/blog`)
+
    - Home improvement tips
    - Maintenance guides
    - Project highlights
@@ -71,6 +81,7 @@ Precision Flooring & Contracting is your trusted partner for all home and commer
    - Emergency contact information
 
 ### Technical Stack
+
 - Next.js 14 (React Framework)
 - TypeScript
 - Tailwind CSS
@@ -79,6 +90,7 @@ Precision Flooring & Contracting is your trusted partner for all home and commer
 - Modern UI Components
 
 ### Key Features
+
 - Mobile-responsive design
 - Fast loading pages
 - SEO optimized content
@@ -89,6 +101,7 @@ Precision Flooring & Contracting is your trusted partner for all home and commer
 - Social media integration
 
 ## Development Guidelines
+
 - Maintain consistent branding
 - Ensure accessibility standards
 - Optimize for search engines
@@ -97,6 +110,7 @@ Precision Flooring & Contracting is your trusted partner for all home and commer
 - Regular content updates
 
 ## SEO Focus Keywords
+
 - Pressure washing cleaning Ottawa
 - Sealing pavers Ottawa
 - Laminate flooring Ottawa

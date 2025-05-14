@@ -101,7 +101,7 @@ const Navigation = () => {
             <div className="relative w-32 h-18 flex items-center">
               <Image
                 src="/images/pfc.png"
-                alt="PFC Logo"
+                alt="PCF Logo"
                 width={200}
                 height={105}
                 className="object-contain"
@@ -133,6 +133,7 @@ const Navigation = () => {
                     active={activeItem}
                     item={item.label}
                     label={item.label}
+                    href={item.href}
                   >
                     <div className="grid grid-cols-2 gap-6 min-w-[400px] max-w-[90vw]">
                       {Object.entries(servicesByCategory).map(
@@ -163,6 +164,7 @@ const Navigation = () => {
                     active={activeItem}
                     item={item.label}
                     label={item.label}
+                    href={item.href}
                   >
                     <div className="min-w-[350px] max-w-[90vw] space-y-4">
                       <h3 className="text-sm font-bold text-secondary border-b pb-2 mb-3">
@@ -261,27 +263,35 @@ const Navigation = () => {
                 if (item.label === "SERVICES") {
                   return (
                     <div key={item.href} className="space-y-2">
-                      <div
-                        className="text-secondary hover:text-[#d6781c] font-medium transition-colors flex items-center justify-between cursor-pointer py-2"
-                        onClick={() => handleMobileItemClick(item.label)}
-                      >
-                        {item.label}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className={`h-4 w-4 transition-transform ${
-                            activeItem === item.label ? "rotate-180" : ""
-                          }`}
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
+                      <div className="flex justify-between items-center">
+                        <Link
+                          href={item.href}
+                          className="text-secondary hover:text-[#d6781c] font-medium transition-colors py-2"
+                          onClick={() => setIsMenuOpen(false)}
                         >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
+                          {item.label}
+                        </Link>
+                        <button
+                          onClick={() => handleMobileItemClick(item.label)}
+                          className="p-2"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className={`h-4 w-4 transition-transform text-secondary ${
+                              activeItem === item.label ? "rotate-180" : ""
+                            }`}
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
+                        </button>
                       </div>
 
                       <AnimatePresence>
@@ -325,27 +335,35 @@ const Navigation = () => {
                 if (item.label === "BLOG") {
                   return (
                     <div key={item.href} className="space-y-2">
-                      <div
-                        className="text-secondary hover:text-[#d6781c] font-medium transition-colors flex items-center justify-between cursor-pointer py-2"
-                        onClick={() => handleMobileItemClick(item.label)}
-                      >
-                        {item.label}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className={`h-4 w-4 transition-transform ${
-                            activeItem === item.label ? "rotate-180" : ""
-                          }`}
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
+                      <div className="flex justify-between items-center">
+                        <Link
+                          href={item.href}
+                          className="text-secondary hover:text-[#d6781c] font-medium transition-colors py-2"
+                          onClick={() => setIsMenuOpen(false)}
                         >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
+                          {item.label}
+                        </Link>
+                        <button
+                          onClick={() => handleMobileItemClick(item.label)}
+                          className="p-2"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className={`h-4 w-4 transition-transform text-secondary ${
+                              activeItem === item.label ? "rotate-180" : ""
+                            }`}
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
+                        </button>
                       </div>
 
                       <AnimatePresence>

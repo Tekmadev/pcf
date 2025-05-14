@@ -10,7 +10,7 @@ export async function generateStaticParams() {
 }
 
 export const metadata = {
-  title: "Blog Post | PFC Blog",
+  title: "Blog Post | PCF Blog",
   description: "Read our latest blog post about flooring and home improvement.",
 };
 

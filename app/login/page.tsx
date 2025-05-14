@@ -14,7 +14,7 @@ export default function LoginPage() {
       <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-lg">
         <div className="p-8 min-h-[42vh]">
           <div className="flex justify-center mb-8">
-            <Image src={pfcLogo} alt="PFC Logo" width={100} height={50} />
+            <Image src={pfcLogo} alt="PCF Logo" width={100} height={50} />
           </div>
           <div className="flex justify-center mb-6">
             <button
