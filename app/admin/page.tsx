@@ -7,6 +7,7 @@ import pfcLogo from "@/public/images/pfc.png";
 import googleLogo from "@/public/images/google-logo.svg";
 import { supabase } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
+import { access } from "fs";
 
 export default function AdminPage() {
   const router = useRouter();
@@ -114,7 +115,7 @@ export default function AdminPage() {
         password,
         options: {
           data:{
-            name:name,
+            full_name:name,
           },
         },
       });
@@ -153,6 +154,25 @@ export default function AdminPage() {
         setError("")
       },5000);
     } 
+  }
+
+  async function handleGoogleSignIn(){
+    try{
+      const {data, error} = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options:{
+          redirectTo: `${window.location.origin}/admin/dashboard`,
+          queryParams:{
+            access_type: 'offline',
+            prompt: 'consent',
+          },
+        },
+      });
+    }catch (error){
+      console.log("Erreur de connexion google", error)
+      setError('Error while connecting with Google');
+      setTimeout(() => setError(''), 5000);
+    }
   }
 
   return (
@@ -207,7 +227,7 @@ export default function AdminPage() {
                 )}
               </form>
               <div className="flex justify-center mt-5">
-                <button className="flex items-center space-x-2 border px-5 py-2.5 rounded-md hover:bg-gray-100 transition-colors">
+                <button className="flex items-center space-x-2 border px-5 py-2.5 rounded-md hover:bg-gray-100 transition-colors" type="button" onClick={handleGoogleSignIn}>
                   <Image
                     src={googleLogo}
                     alt="Google Logo"
