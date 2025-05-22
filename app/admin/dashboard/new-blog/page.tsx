@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function NewBlog() {
   const router = useRouter();
@@ -13,36 +14,7 @@ export default function NewBlog() {
   });
   const [imagePreview, setImagePreview] = useState<string>("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const previewUrl = URL.createObjectURL(file);
-      setImagePreview(previewUrl);
-    }
-  };
-
-  const handleRemoveImage = () => {
-    setImagePreview("");
-    // Reset the file input
-    const fileInput = document.getElementById('image-upload') as HTMLInputElement;
-    if (fileInput) {
-      fileInput.value = "";
-    }
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Form submission logic will be implemented later
-    console.log("Form submitted:", { ...formData, image: imagePreview });
-  };
+  
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -54,12 +26,12 @@ export default function NewBlog() {
               <h1 className="text-xl font-semibold text-gray-800">New Blog</h1>
             </div>
             <div className="flex items-center space-x-4">
-              <button
-                onClick={() => router.push("/admin/dashboard")}
+              <Link
+                href="/admin/dashboard"
                 className="text-gray-600 hover:text-gray-900"
               >
                 Back to Dashboard
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -69,7 +41,7 @@ export default function NewBlog() {
       <main className="max-w-4xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="px-4 py-6 sm:px-0">
           <div className="bg-white rounded-lg shadow p-6">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form className="space-y-6">
               {/* Title */}
               <div>
                 <label htmlFor="title" className="block text-sm font-medium text-gray-700">
@@ -80,7 +52,6 @@ export default function NewBlog() {
                   id="title"
                   name="title"
                   value={formData.title}
-                  onChange={handleChange}
                   required
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#d6781c] focus:ring-[#d6781c] sm:text-sm"
                   placeholder="Enter blog title"
@@ -96,7 +67,6 @@ export default function NewBlog() {
                   id="category"
                   name="category"
                   value={formData.category}
-                  onChange={handleChange}
                   required
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#d6781c] focus:ring-[#d6781c] sm:text-sm"
                 >
@@ -141,7 +111,6 @@ export default function NewBlog() {
                           type="file"
                           className="sr-only"
                           accept="image/*"
-                          onChange={handleImageUpload}
                         />
                       </label>
                       <p className="pl-1">or drag and drop</p>
@@ -161,7 +130,6 @@ export default function NewBlog() {
                     </div>
                     <button
                       type="button"
-                      onClick={handleRemoveImage}
                       className="mt-2 inline-flex items-center px-3 py-1.5 border border-transparent text-sm font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
                     >
                       <svg
@@ -193,7 +161,6 @@ export default function NewBlog() {
                   id="content"
                   name="content"
                   value={formData.content}
-                  onChange={handleChange}
                   required
                   rows={10}
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#d6781c] focus:ring-[#d6781c] sm:text-sm"
