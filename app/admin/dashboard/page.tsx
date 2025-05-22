@@ -1,26 +1,54 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { supabase } from "@/lib/supabase";
 
 export default function DashboardPage() {
   const router = useRouter();
-  const [blogs, setBlogs] = useState([]);
-  const [message, setMessage] = useState("");
-  const [error, setError] = useState("");
-
-  const handleDelete = async (id: string) => {
-    try {
-      // Delete logic will be implemented here
-      setMessage("Blog deleted successfully");
-      setTimeout(() => setMessage(""), 5000);
-    } catch (error) {
-      setError("Error while deleting");
-      setTimeout(() => setError(""), 5000);
+  const blogs = [
+    {
+      id: "1",
+      title: "Getting Started with Next.js",
+      category: "Technology",
+      description: "Learn the basics of Next.js and how to build modern web applications",
+      date: "2024-03-20",
+      imageUrl: "https://images.unsplash.com/photo-1499750310107-5fef28a66643"
+    },
+    {
+      id: "2",
+      title: "The Future of Web Development",
+      category: "Technology",
+      description: "Exploring upcoming trends and technologies in web development",
+      date: "2024-03-19",
+      imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+    },
+    {
+      id: "3",
+      title: "Best Practices in React",
+      category: "Technology",
+      description: "Essential tips and tricks for writing better React code",
+      date: "2024-03-18",
+      imageUrl: "https://images.unsplash.com/photo-1633356122544-f134324a6cee"
     }
-  };
+  ];
+
+  const handleLogout = async () => {
+    try {
+      const { error } = await supabase.auth.signOut()
+      router.push("/admin")
+      if (error) {
+        console.log("Error while logout")
+        return;
+      }
+      console.log("logout succesfully");
+    } catch {
+      console.log("Different Error while logout")
+    }
+  }
+
+  //console.log("logout succesfuly", error)
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -33,7 +61,7 @@ export default function DashboardPage() {
             </div>
             <div className="flex items-center">
               <button
-                onClick={() => router.push("/admin")}
+                onClick={handleLogout}
                 className="text-gray-600 hover:text-gray-900"
               >
                 Logout
@@ -58,18 +86,6 @@ export default function DashboardPage() {
                 </Link>
               </div>
 
-              {/* Messages */}
-              {message && (
-                <div className="mb-4 p-4 bg-green-50 text-green-700 rounded-md">
-                  {message}
-                </div>
-              )}
-              {error && (
-                <div className="mb-4 p-4 bg-red-50 text-red-700 rounded-md">
-                  {error}
-                </div>
-              )}
-
               {/* Table */}
               <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200">
@@ -80,6 +96,9 @@ export default function DashboardPage() {
                       </th>
                       <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         Title
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Description
                       </th>
                       <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         Category
@@ -93,7 +112,7 @@ export default function DashboardPage() {
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
-                    {blogs.map((blog: any) => (
+                    {blogs.map((blog) => (
                       <tr key={blog.id}>
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="h-10 w-10 relative">
@@ -108,6 +127,11 @@ export default function DashboardPage() {
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="text-sm font-medium text-gray-900">
                             {blog.title}
+                          </div>
+                        </td>
+                        <td className="px-6 py-4">
+                          <div className="text-sm text-gray-500 max-w-xs truncate">
+                            {blog.description}
                           </div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
@@ -127,7 +151,6 @@ export default function DashboardPage() {
                               Edit
                             </Link>
                             <button
-                              onClick={() => handleDelete(blog.id)}
                               className="text-red-600 hover:text-red-900"
                             >
                               Delete
