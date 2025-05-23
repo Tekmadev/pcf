@@ -19,7 +19,7 @@ const services = [
       text: "Carpet Masters",
       url: "https://www.carpetmasters.co",
     },
-    image: "/images/carpet-cleaning.webp",
+    image: "/images/services/carpet-cleaning.webp",
     href: "/services/carpet-cleaning",
   },
   {
