@@ -83,7 +83,7 @@ export const services: Service[] = [
       "Extends the life of your exterior surfaces",
       "Improves safety by removing slippery substances",
     ],
-    image: "/images/services/pressure-washing.jpg",
+    image: "/images/services/Pressure Washing.webp",
     gallery: [
       "/images/services/pressure-washing-1.jpg",
       "/images/services/pressure-washing-2.jpg",
@@ -130,7 +130,7 @@ export const services: Service[] = [
       "Enhances the natural colors of your pavers",
       "Protects against freeze-thaw damage in Ottawa winters",
     ],
-    image: "/images/services/paver-sealing.jpg",
+    image: "/images/services/Sealing Pavers.webp",
     gallery: [
       "/images/services/paver-sealing-1.jpg",
       "/images/services/paver-sealing-2.jpg",
@@ -177,7 +177,7 @@ export const services: Service[] = [
       "Ideal for high-traffic areas and homes with children or pets",
       "Can be installed over most existing floors",
     ],
-    image: "/images/services/laminate-flooring.jpg",
+    image: "/images/services/Laminate Flooring.webp",
     gallery: [
       "/images/services/laminate-flooring-1.jpg",
       "/images/services/laminate-flooring-2.jpg",
@@ -224,7 +224,7 @@ export const services: Service[] = [
       "Improves indoor air quality compared to carpet",
       "Can be refinished multiple times to renew appearance",
     ],
-    image: "/images/services/hardwood-flooring.jpg",
+    image: "/images/services/Hardwood Flooring.webp",
     gallery: [
       "/images/services/hardwood-flooring-1.jpg",
       "/images/services/hardwood-flooring-2.jpg",
@@ -272,7 +272,7 @@ export const services: Service[] = [
       "Scratch and dent resistant for households with pets",
       "More comfortable and warmer than ceramic tile",
     ],
-    image: "/images/services/vinyl-flooring.jpg",
+    image: "/images/services/Vinyl Flooring.webp",
     gallery: [
       "/images/services/vinyl-flooring-1.jpg",
       "/images/services/vinyl-flooring-2.jpg",
@@ -319,7 +319,7 @@ export const services: Service[] = [
       "More cost-effective than full replacement",
       "Extends the lifespan of your paver installation",
     ],
-    image: "/images/services/uneven-pavers.jpg",
+    image: "/images/services/Uneven Pavers.webp",
     gallery: [
       "/images/services/uneven-pavers-1.jpg",
       "/images/services/uneven-pavers-2.jpg",
@@ -366,7 +366,7 @@ export const services: Service[] = [
       "Eliminates safety hazards from broken pavers",
       "Fast turnaround for most repair projects",
     ],
-    image: "/images/services/damaged-pavers.jpg",
+    image: "/images/services/Damaged Pavers.webp",
     gallery: [
       "/images/services/damaged-pavers-1.jpg",
       "/images/services/damaged-pavers-2.jpg",
@@ -413,7 +413,7 @@ export const services: Service[] = [
       "Maintains flexibility during freeze-thaw cycles",
       "Enhances overall stability of paver surfaces",
     ],
-    image: "/images/services/polymeric-sand.jpg",
+    image: "/images/services/Polymeric Sand.webp",
     gallery: [
       "/images/services/polymeric-sand-1.jpg",
       "/images/services/polymeric-sand-2.jpg",
@@ -508,7 +508,7 @@ export const services: Service[] = [
       "Restores color and texture of upholstery",
       "Creates a healthier indoor environment",
     ],
-    image: "/images/services/sofa-cleaning.jpg",
+    image: "/images/services/Sofa Cleaning.webp",
     gallery: [
       "/images/services/sofa-cleaning-1.jpg",
       "/images/services/sofa-cleaning-2.jpg",
@@ -555,7 +555,7 @@ export const services: Service[] = [
       "Extends the life of valuable rugs",
       "Restores softness and appearance",
     ],
-    image: "/images/services/rug-cleaning.jpg",
+    image: "/images/services/Rug Cleaning.webp",
     gallery: [
       "/images/services/rug-cleaning-1.jpg",
       "/images/services/rug-cleaning-2.jpg",
@@ -602,7 +602,7 @@ export const services: Service[] = [
       "Improves indoor air quality",
       "Safe and non-toxic cleaning method",
     ],
-    image: "/images/services/steam-cleaning.jpg",
+    image: "/images/services/Steam Cleaning.webp",
     gallery: [
       "/images/services/steam-cleaning-1.jpg",
       "/images/services/steam-cleaning-2.jpg",
