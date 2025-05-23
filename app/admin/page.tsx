@@ -7,7 +7,6 @@ import pfcLogo from "@/public/images/pfc.png";
 import googleLogo from "@/public/images/google-logo.svg";
 import { supabase } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
-import { access } from "fs";
 
 export default function AdminPage() {
   const router = useRouter();
