@@ -150,7 +150,7 @@ export default function ServicePage({
             </ul>
 
             {/* Gallery */}
-            {service.gallery && service.gallery.length > 0 && (
+            {/*{service.gallery && service.gallery.length > 0 && (
               <>
                 <h3 className="text-xl md:text-2xl font-bold text-[#292524] mb-6">
                   Our Work
@@ -173,7 +173,7 @@ export default function ServicePage({
                   ))}
                 </div>
               </>
-            )}
+            )}*/}
 
             {/* Special link for Carpet Cleaning service */}
             {isCarpetCleaning && (
