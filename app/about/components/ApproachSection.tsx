@@ -13,7 +13,7 @@ export default function ApproachSection() {
               The PCF Difference
             </h2>
             <p className="text-secondary/90 mb-8">
-              What sets Precision Flooring & Contracting apart isn't just what
+              What sets Precision Contracting & Flooring apart isn't just what
               we do, but how we do it. Our unique approach combines old-world
               craftsmanship with modern efficiency to deliver an exceptional
               experience from consultation to completion.
@@ -115,28 +115,28 @@ export default function ApproachSection() {
           <div className="grid grid-cols-2 gap-4">
             <Image
               src="/images/stockPics/flooring1.webp"
-              alt="Precision Flooring & Contracting work sample"
+              alt="Precision Contracting & Flooring work sample"
               width={300}
               height={400}
               className="rounded-lg shadow-md w-full h-auto object-cover"
             />
             <Image
               src="/images/stockPics/flooring2.webp"
-              alt="Precision Flooring & Contracting work sample"
+              alt="Precision Contracting & Flooring work sample"
               width={300}
               height={350}
               className="rounded-lg shadow-md w-full h-auto object-cover mt-12"
             />
             <Image
               src="/images/stockPics/tilling.webp"
-              alt="Precision Flooring & Contracting work sample"
+              alt="Precision Contracting & Flooring work sample"
               width={300}
               height={400}
               className="rounded-lg shadow-md w-full h-auto object-cover mt-12"
             />
             <Image
               src="/images/stockPics/baex1.webp"
-              alt="Precision Flooring & Contracting work sample"
+              alt="Precision Contracting & Flooring work sample"
               width={300}
               height={350}
               className="rounded-lg shadow-md w-full h-auto object-cover"

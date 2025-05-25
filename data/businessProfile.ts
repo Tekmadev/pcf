@@ -1,13 +1,13 @@
 // Business information that can be updated in one place
 export const businessProfile = {
-  name: "PCF - Precision Flooring & Contracting",
+  name: "PCF - Precision Contracting & Flooring",
   shortName: "PCF",
   phone: {
     raw: "+16139146260", // Used for tel: links (no spaces or formatting)
     display: "+1 (613) 914-6260", // Formatted for display
     simple: "+1 613-914-6260", // Simple format with dashes
   },
-  email: "info@pfcottawa.com",
+  email: "precisioncontractinginfo@gmail.com",
   address: {
     street: "123 Main Street",
     city: "Ottawa",
@@ -16,8 +16,8 @@ export const businessProfile = {
     country: "Canada",
   },
   social: {
-    facebook: "https://facebook.com/pfcottawa",
-    instagram: "https://instagram.com/pfcottawa",
+    facebook: "https://www.facebook.com/people/Precision-Flooring-Contracting/61574594093799",
+    // instagram: "https://instagram.com/pfcottawa",
     // twitter: "https://twitter.com/pfcottawa",
   },
   hours: {

@@ -16,7 +16,7 @@ export function generateStaticParams() {
 
 // Replace dynamic metadata with static metadata
 export const metadata = {
-  title: "Service | PCF - Precision Flooring & Contracting",
+  title: "Service | PCF - Precision Contracting & Flooring",
   description: "Explore our professional flooring and contracting services.",
 };
 

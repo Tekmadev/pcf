@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "../globals.css";;
+import "../globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PCF - Precision Flooring & Contracting",
+  title: "PCF - Precision Contracting & Flooring",
   description:
     "Your trusted partner for all home and commercial improvement needs in Ottawa",
   icons: {

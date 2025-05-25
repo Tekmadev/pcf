@@ -23,12 +23,12 @@ const services = [
     href: "/services/carpet-cleaning",
   },
   {
-    id: "renovation",
-    title: "Home Renovation",
+    id: "re-sanding-sealing",
+    title: "Resanding & Sealing",
     description:
-      "Complete home transformations handled with precision and care from start to finish.",
-    image: "/images/stockPics/flooring1.webp",
-    href: "/services/home-renovation",
+      "Protect and enhance your pavers with our professional resanding and sealing services.",
+    image: "/images/services/Sealing Pavers.webp",
+    href: "/services/re-sanding-sealing",
   },
 ];
 

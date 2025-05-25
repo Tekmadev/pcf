@@ -6,9 +6,9 @@ import TestimonialsSection from "./components/TestimonialsSection";
 import CTASection from "./components/CTASection";
 
 export const metadata = {
-  title: "About Us | PCF - Precision Flooring & Contracting",
+  title: "About Us | PCF - Precision Contracting & Flooring",
   description:
-    "Learn about Precision Flooring & Contracting's journey, mission, and the quality craftsmanship that makes us Ottawa's trusted home improvement experts.",
+    "Learn about Precision Contracting & Flooring's journey, mission, and the quality craftsmanship that makes us Ottawa's trusted home improvement experts.",
 };
 
 export default function AboutPage() {

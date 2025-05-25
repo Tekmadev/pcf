@@ -1,8 +1,8 @@
-# Precision Flooring & Contracting (PCF)
+# Precision Contracting & Flooring (PCF)
 
 ## About the Business
 
-Precision Flooring & Contracting is your trusted partner for all home and commercial improvement needs in the Ottawa area. We specialize in a comprehensive range of professional services designed to enhance and maintain your property.
+Precision Contracting & Flooring is your trusted partner for all home and commercial improvement needs in the Ottawa area. We specialize in a comprehensive range of professional services designed to enhance and maintain your property.
 
 ## Contact Information
 

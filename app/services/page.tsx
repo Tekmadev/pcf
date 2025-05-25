@@ -3,7 +3,7 @@ import Image from "next/image";
 import { services, getAllServiceCategories } from "@/data/services";
 
 export const metadata = {
-  title: "Our Services | PCF - Precision Flooring & Contracting",
+  title: "Our Services | PCF - Precision Contracting & Flooring",
   description:
     "Browse our comprehensive range of flooring, cleaning, and home improvement services in Ottawa. Quality craftsmanship backed by years of experience.",
 };

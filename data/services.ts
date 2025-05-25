@@ -108,14 +108,14 @@ export const services: Service[] = [
     ],
   },
   {
-    id: "paver-sealing",
-    label: "Sealing Pavers Ottawa",
-    href: "/services/paver-sealing",
+    id: "re-sanding-sealing",
+    label: "Resanding & Sealing Ottawa",
+    href: "/services/re-sanding-sealing",
     category: "Pavers",
     shortDescription:
-      "Protect and enhance your pavers with our professional sealing services.",
+      "Protect and enhance your pavers with our professional resanding and sealing services.",
     longDescription:
-      "Our paver sealing services provide long-lasting protection for your patio, walkway, or driveway. We use premium sealants that enhance color, prevent weed growth, and protect against stains, erosion, and fading.",
+      "Our paver resanding and sealing services provide long-lasting protection for your patio, walkway, or driveway. We use premium sealants that enhance color, prevent weed growth, and protect against stains, erosion, and fading.",
     features: [
       "Premium penetrating or topical sealants",
       "Enhances paver color and appearance",

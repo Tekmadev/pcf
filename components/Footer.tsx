@@ -156,7 +156,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="pt-8 mt-8 border-t border-gray-300 text-center">
           <p className="text-secondary">
-            &copy; {new Date().getFullYear()} Precision Flooring & Contracting.
+            &copy; {new Date().getFullYear()} Precision Contracting & Flooring.
             All rights reserved.
           </p>
           <p className="text-secondary mt-2">

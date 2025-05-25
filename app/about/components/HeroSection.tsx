@@ -6,7 +6,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 opacity-20">
         <Image
           src="/images/stockPics/floorfeet.webp"
-          alt="Precision Flooring & Contracting team at work"
+          alt="Precision Contracting & Flooring team at work"
           fill
           priority
           className="object-cover"
