@@ -7,7 +7,7 @@ export const businessProfile = {
     display: "+1 (613) 914-6260", // Formatted for display
     simple: "+1 613-914-6260", // Simple format with dashes
   },
-  email: "precisioncontractinginfo@gmail.com",
+  email: "pcfottawa@gmail.com",
   address: {
     street: "123 Main Street",
     city: "Ottawa",
