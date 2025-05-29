@@ -4,35 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
+import { useState, useEffect } from "react";
 
 export default function DashboardPage() {
   const router = useRouter();
-  const blogs = [
-    {
-      id: "1",
-      title: "Getting Started with Next.js",
-      category: "Technology",
-      description: "Learn the basics of Next.js and how to build modern web applications",
-      date: "2024-03-20",
-      imageUrl: "https://images.unsplash.com/photo-1499750310107-5fef28a66643"
-    },
-    {
-      id: "2",
-      title: "The Future of Web Development",
-      category: "Technology",
-      description: "Exploring upcoming trends and technologies in web development",
-      date: "2024-03-19",
-      imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
-    },
-    {
-      id: "3",
-      title: "Best Practices in React",
-      category: "Technology",
-      description: "Essential tips and tricks for writing better React code",
-      date: "2024-03-18",
-      imageUrl: "https://images.unsplash.com/photo-1633356122544-f134324a6cee"
-    }
-  ];
+  const [blogs, setBlogs] = useState<any[]>([]);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleLogout = async () => {
     try {
@@ -48,7 +25,46 @@ export default function DashboardPage() {
     }
   }
 
-  //console.log("logout succesfuly", error)
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const { data, error } = await supabase.from("blogs").select("*")
+        if (error) {
+          console.log("Error en affichang les donnes", error)
+        } else {
+          console.log("Toutes les donnes", data)
+          if (!data || data.length === 0) {
+            console.log("Aucun donnes trouver")
+          }
+          setBlogs(data || [])
+        }
+      } catch {
+        console.log("Erreur Innatendu")
+      }
+    };
+    fetchBlogs();
+  }, []);
+
+  const handleDelete = async (id: string) => {
+
+    const { error } = await supabase
+      .from('blogs')
+      .delete()
+      .eq('id', id)
+    if (error) {
+      console.error("Erreur lors de la suppression :", error);
+    } else {
+      console.log("Article supprimé avec succès !");
+      setSuccessMessage("Blog deleted with succes !");
+        setTimeout(() => {
+          setSuccessMessage("");
+        }, 3000);
+    }
+
+  }
+  const handleEdit = (id:string) =>{
+    router.push(`/admin/dashboard/edit-blog/${id}`)
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -74,6 +90,11 @@ export default function DashboardPage() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="px-4 py-6 sm:px-0">
+          {successMessage && (
+            <div className="mb-4 p-4 bg-green-50 border border-green-200 rounded-md">
+              <p className="text-sm text-green-600">{successMessage}</p>
+            </div>
+          )}
           <div className="bg-white rounded-lg shadow">
             <div className="p-6">
               <div className="flex justify-between items-center mb-6">
@@ -117,7 +138,7 @@ export default function DashboardPage() {
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="h-10 w-10 relative">
                             <Image
-                              src={blog.imageUrl}
+                              src={blog.image}
                               alt={blog.title}
                               fill
                               className="rounded-md object-cover"
@@ -139,19 +160,20 @@ export default function DashboardPage() {
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="text-sm text-gray-500">
-                            {new Date(blog.date).toLocaleDateString()}
+                            {new Date(blog.created_at).toLocaleDateString()}
                           </div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                           <div className="flex space-x-3">
-                            <Link
-                              href={`/admin/dashboard/edit-blog/${blog.id}`}
+                            <button
+                              onClick={() => handleEdit(blog.id)}
                               className="text-[#d6781c] hover:text-[#c66812]"
                             >
                               Edit
-                            </Link>
+                            </button>
                             <button
                               className="text-red-600 hover:text-red-900"
+                              onClick={() => handleDelete(blog.id)}
                             >
                               Delete
                             </button>

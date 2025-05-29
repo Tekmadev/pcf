@@ -1,9 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { supabase } from "@/lib/supabase";
+import { title } from "process";
 
 export default function NewBlog() {
   const router = useRouter();
@@ -11,10 +13,62 @@ export default function NewBlog() {
     title: "",
     category: "",
     content: "",
+    imageUrl: "",
   });
   const [imagePreview, setImagePreview] = useState<string>("");
+  const [error, setError] = useState<string>("");
 
-  
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const validateForm = () => {
+    if (!formData.title.trim()) {
+      setError("Le titre est requis");
+      return false;
+    }
+    if (!formData.category) {
+      setError("La catégorie est requise");
+      return false;
+    }
+    if (!formData.content.trim()) {
+      setError("Le contenu est requis");
+      return false;
+    }
+    return true;
+  };
+
+  const handleAddBlogs = async (e: FormEvent) => {
+    e.preventDefault();
+
+    let imageUrl = "";
+
+    try {
+      const { data, error } = await supabase
+        .from("blogs")
+        .insert([{
+          title: formData.title,
+          description: formData.content,
+          image: imageUrl,         
+          category: formData.category,
+          status: true               
+        }])
+        .select()
+        .single();
+
+      if (error) {
+        console.log("Erreur aajouter dasn blog", data);
+      } else {
+        console.log("Blog Creer", data);
+        router.push("/admin/dashboard");
+      }
+    } catch (err) {
+      setError("Une erreur inattendue s'est produite");
+      console.error("Erreur:", err);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -41,7 +95,12 @@ export default function NewBlog() {
       <main className="max-w-4xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="px-4 py-6 sm:px-0">
           <div className="bg-white rounded-lg shadow p-6">
-            <form className="space-y-6">
+            {error && (
+              <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-md">
+                <p className="text-sm text-red-600">{error}</p>
+              </div>
+            )}
+            <form className="space-y-6" onSubmit={handleAddBlogs}>
               {/* Title */}
               <div>
                 <label htmlFor="title" className="block text-sm font-medium text-gray-700">
@@ -52,6 +111,7 @@ export default function NewBlog() {
                   id="title"
                   name="title"
                   value={formData.title}
+                  onChange={handleChange}
                   required
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#d6781c] focus:ring-[#d6781c] sm:text-sm"
                   placeholder="Enter blog title"
@@ -67,13 +127,14 @@ export default function NewBlog() {
                   id="category"
                   name="category"
                   value={formData.category}
+                  onChange={handleChange}
                   required
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#d6781c] focus:ring-[#d6781c] sm:text-sm"
                 >
                   <option value="">Select a category</option>
-                  <option value="news">News</option>
-                  <option value="technology">Technology</option>
-                  <option value="lifestyle">Lifestyle</option>
+                  <option value="news">Outdoor</option>
+                  <option value="technology">Cleaning</option>
+                  <option value="lifestyle">FLooring</option>
                   <option value="business">Business</option>
                 </select>
               </div>
@@ -161,6 +222,7 @@ export default function NewBlog() {
                   id="content"
                   name="content"
                   value={formData.content}
+                  onChange={handleChange}
                   required
                   rows={10}
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#d6781c] focus:ring-[#d6781c] sm:text-sm"
