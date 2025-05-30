@@ -155,8 +155,8 @@ export default function EditBlogForm({ blog }: EditBlogFormProps) {
                         Content
                     </label>
                     <textarea
-                        id="content"
-                        name="content"
+                        id="description"
+                        name="description"
                         value={champ.description}
                         onChange={handleChange}
                         required
@@ -179,10 +179,10 @@ export default function EditBlogForm({ blog }: EditBlogFormProps) {
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#d6781c] focus:ring-[#d6781c] sm:text-sm"
                     >
                         <option value="">Select a category</option>
-                        <option value="news">Outdoor</option>
-                        <option value="technology">Cleaning</option>
-                        <option value="lifestyle">Flooring</option>
-                        <option value="business">Business</option>
+                        <option value="Outdoor">Outdoor</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="Flooring">Flooring</option>
+                        <option value="Business">Business</option>
                     </select>
                 </div>
 
