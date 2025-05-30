@@ -2,22 +2,28 @@ import { blogPosts, getPostById } from "@/data/blog";
 import Image from "next/image";
 import { format } from "date-fns";
 import { notFound } from "next/navigation";
+import { supabase } from "@/lib/supabase";
 
-export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    id: post.id,
-  }));
+interface Blog {
+  id:string;
+  title : string;
+  descripiton: string;
+  image: string;
+  category: string;
+  created_at: string;
 }
 
-export const metadata = {
-  title: "Blog Post | PCF Blog",
-  description: "Read our latest blog post about flooring and home improvement.",
-};
+export async function generateStaticParams() {
+  const { data: blogs } = await supabase.from("blogs").select("id");
+  return blogs?.map((blog) => ({
+    id: blog.id,
+  })) || [];
+}
 
-export default function BlogPostPage({ params }: { params: any }) {
-  const post = getPostById(params.id);
+export default async function BlogPostPage({ params }: { params: {id: string}}) {
+  const {data: blog, error} = await supabase.from("blogs").select("*").eq("id", params.id).single();
 
-  if (!post) {
+  if (error || !blog){
     notFound();
   }
 
@@ -30,18 +36,18 @@ export default function BlogPostPage({ params }: { params: any }) {
           <div className="max-w-4xl">
             <div className="flex items-center gap-4 mb-4">
               <span className="text-[#d6781c] font-medium">
-                {post.category}
+                {blog.category}
               </span>
               <span className="text-gray-500">•</span>
               <span className="text-gray-500">
-                {format(new Date(post.date), "MMMM d, yyyy")}
+                {format(new Date(blog.created_at), "MMMM d, yyyy")}
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              {post.title}
+              {blog.title}
             </h1>
             <p className="text-xl text-white/90 max-w-2xl">
-              {post.description}
+              {blog.description}
             </p>
           </div>
         </div>
@@ -52,42 +58,31 @@ export default function BlogPostPage({ params }: { params: any }) {
         <div className="max-w-4xl mx-auto">
           <div className="relative h-[400px] rounded-xl overflow-hidden mb-12">
             <Image
-              src={post.image}
-              alt={post.title}
+              src={blog.image}
+              alt={blog.title}
               fill
               className="object-cover"
             />
           </div>
 
-          <div className="prose prose-lg max-w-none">{post.content}</div>
+          <div className="prose prose-lg max-w-none">{blog.description}</div>
 
           {/* Author Section */}
           <div className="mt-12 pt-8 border-t border-gray-200">
-            <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center">
-                <span className="text-2xl font-bold text-gray-500">
-                  {post.author.charAt(0)}
+            <div className="flex items-center gap-6">
+              <div className="w-20 h-20 rounded-full bg-[#d6781c] flex items-center justify-center">
+                <span className="text-3xl font-bold text-white">
+                  {blog.title.charAt(0).toUpperCase()}
                 </span>
               </div>
               <div>
-                <h3 className="text-lg font-bold text-[#292524]">
-                  {post.author}
+                <h3 className="text-xl font-bold text-[#292524] mb-2">
+                  {blog.title}
                 </h3>
-                <p className="text-gray-500">Flooring Expert</p>
+                <p className="text-gray-600">Published on {format(new Date(blog.created_at), "MMMM d, yyyy")}</p>
+                <p className="text-[#d6781c] font-medium mt-1">{blog.category}</p>
               </div>
             </div>
-          </div>
-
-          {/* Tags */}
-          <div className="mt-8 flex flex-wrap gap-2">
-            {post.tags.map((tag) => (
-              <span
-                key={tag}
-                className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm"
-              >
-                {tag}
-              </span>
-            ))}
           </div>
         </div>
       </div>
