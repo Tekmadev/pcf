@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.pcfottawa.com/sitemap.xml
+
+# Disallow crawling of admin or private areas if any
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /api/
+
+# Allow crawling of main service pages
+Allow: /services/
+Allow: /blog/
+Allow: /contact/
+Allow: /about/ 
