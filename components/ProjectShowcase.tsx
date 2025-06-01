@@ -1,41 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./ui/Button";
-
-const projects = [
-  {
-    id: "modern-kitchen",
-    title: "Modern Kitchen Renovation",
-    category: "Renovation",
-    image: "/images/stockPics/cleanroom.webp",
-    description:
-      "Complete kitchen transformation with custom cabinetry and premium tile flooring.",
-  },
-  {
-    id: "luxury-living",
-    title: "Luxury Living Room",
-    category: "Hardwood Flooring",
-    image: "/images/stockPics/flooring1.webp",
-    description:
-      "Engineered hardwood installation with custom inlays and expert craftsmanship.",
-  },
-  {
-    id: "spa-bathroom",
-    title: "Spa-Inspired Bathroom",
-    category: "Tile Installation",
-    image: "/images/stockPics/tilling.webp",
-    description:
-      "Waterproof ceramic tile installation with heated flooring system.",
-  },
-  {
-    id: "basement-remodel",
-    title: "Basement Remodel",
-    category: "Renovation",
-    image: "/images/stockPics/floorfeet.webp",
-    description:
-      "Complete basement transformation with custom entertainment area and vinyl flooring.",
-  },
-];
+import { projects } from "@/data/projects";
 
 const ProjectShowcase = () => {
   return (

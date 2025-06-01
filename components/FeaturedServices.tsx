@@ -3,18 +3,18 @@ import Link from "next/link";
 
 const services = [
   {
-    id: "hardwood-flooring",
-    title: "Hardwood Flooring",
+    id: "re-sanding-sealing",
+    title: "Resanding & Sealing",
     description:
-      "Premium hardwood installation with unmatched craftsmanship and attention to detail.",
-    image: "/images/stockPics/flooring2.webp",
-    href: "/services/hardwood-flooring",
+      "Protect and enhance your pavers with our professional resanding and sealing services.",
+    image: "/images/services/Sealing Pavers.webp",
+    href: "/services/re-sanding-sealing",
   },
   {
     id: "carpet-cleaning",
     title: "Carpet Cleaning",
     description:
-      "Professional carpet cleaning services that remove deep stains, allergens, and extend the life of your carpets. Visit our partner ",
+    "Professional carpet cleaning services that remove deep stains, allergens, and extend the life of your carpets. Visit our partner ",
     link: {
       text: "Carpet Masters",
       url: "https://www.carpetmasters.co",
@@ -23,12 +23,12 @@ const services = [
     href: "/services/carpet-cleaning",
   },
   {
-    id: "re-sanding-sealing",
-    title: "Resanding & Sealing",
+    id: "hardwood-flooring",
+    title: "Hardwood Flooring",
     description:
-      "Protect and enhance your pavers with our professional resanding and sealing services.",
-    image: "/images/services/Sealing Pavers.webp",
-    href: "/services/re-sanding-sealing",
+      "Premium hardwood installation with unmatched craftsmanship and attention to detail.",
+    image: "/images/stockPics/flooring2.webp",
+    href: "/services/hardwood-flooring",
   },
 ];
 

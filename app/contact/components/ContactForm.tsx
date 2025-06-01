@@ -42,15 +42,15 @@ export default function ContactForm() {
     try {
       // Replace these with your actual EmailJS service, template, and user ID
       const result = await emailjs.send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_2sk2dow",
+        "template_2n8pfyc",
         {
-          from_name: formData.name,
-          from_email: formData.email,
-          from_phone: formData.phone,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
           message: formData.message,
         },
-        "YOUR_PUBLIC_KEY"
+        "ZI4SuZpE9GhhYiKpF"
       );
 
       if (result.status === 200) {

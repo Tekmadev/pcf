@@ -108,49 +108,97 @@ export const services: Service[] = [
     ],
   },
   {
-    id: "re-sanding-sealing",
-    label: "Resanding & Sealing Ottawa",
-    href: "/services/re-sanding-sealing",
-    category: "Pavers",
+    id: "resanding-pavers",
+    label: "Resanding Pavers Ottawa",
+    href: "/services/resanding-pavers",
+    category: "Interlock Pavers",
     shortDescription:
-      "Protect and enhance your pavers with our professional resanding and sealing services.",
+      "Professional paver joint resanding to restore stability and prevent weed growth.",
     longDescription:
-      "Our paver resanding and sealing services provide long-lasting protection for your patio, walkway, or driveway. We use premium sealants that enhance color, prevent weed growth, and protect against stains, erosion, and fading.",
+      "Our paver resanding service removes old, loose joint sand and replaces it with premium joint sand or polymeric sand. This essential maintenance restores the structural integrity of your paver installation while preventing weed growth and ant infestations between pavers.",
     features: [
-      "Premium penetrating or topical sealants",
-      "Enhances paver color and appearance",
-      "Stabilizes joint sand to prevent washout",
-      "Resists oil, water, and other stains",
-      "UV protection to prevent fading",
+      "Complete removal of old, loose joint sand",
+      "Thorough cleaning of paver joints",
+      "Premium joint sand or polymeric sand application",
+      "Proper compaction and finishing techniques",
+      "Precision application to avoid surface contamination",
     ],
     benefits: [
-      "Extends paver lifespan by up to 10 years",
-      "Reduces ongoing maintenance needs",
+      "Restores structural stability to paver surfaces",
       "Prevents weed and moss growth between pavers",
-      "Enhances the natural colors of your pavers",
-      "Protects against freeze-thaw damage in Ottawa winters",
+      "Eliminates ant and insect nesting in joints",
+      "Improves overall appearance of hardscape",
+      "Prepares surface for optional sealing treatment",
     ],
     image: "/images/services/Sealing Pavers.webp",
     gallery: [
-      "/images/services/paver-sealing-1.jpg",
-      "/images/services/paver-sealing-2.jpg",
-      "/images/services/paver-sealing-3.jpg",
+      "/images/services/resanding-pavers-1.jpg",
+      "/images/services/resanding-pavers-2.jpg",
+      "/images/services/resanding-pavers-3.jpg",
     ],
     faqs: [
       {
-        question: "How often should pavers be sealed?",
+        question: "How often should paver joints be resanded?",
         answer:
-          "We recommend resealing pavers every 3-5 years, depending on usage and exposure to elements.",
+          "Paver joints typically need resanding every 2-3 years, depending on weather exposure, foot traffic, and the type of sand originally used.",
       },
       {
-        question: "Can you seal pavers that have never been sealed before?",
+        question:
+          "What's the difference between regular sand and polymeric sand?",
         answer:
-          "Yes, we thoroughly clean and prepare pavers before applying sealant, even if they've never been sealed.",
+          "Polymeric sand hardens when activated with water, creating a more durable joint that better resists erosion, weeds, and insect intrusion compared to regular sand.",
       },
       {
-        question: "How long does the sealing process take?",
+        question: "Can you resand pavers that have never been maintained?",
         answer:
-          "Most residential paver sealing projects are completed in 1-2 days, including preparation and drying time.",
+          "Yes, we can restore even heavily deteriorated paver joints by thoroughly cleaning and reapplying fresh joint sand or polymeric sand.",
+      },
+    ],
+  },
+  {
+    id: "sealing-pavers",
+    label: "Sealing Pavers Ottawa",
+    href: "/services/sealing-pavers",
+    category: "Interlock Pavers",
+    shortDescription:
+      "Protect and enhance your pavers with professional sealing services.",
+    longDescription:
+      "Our paver sealing service applies premium penetrating or topical sealants to protect your investment and enhance the natural beauty of your pavers. Our sealants provide long-lasting protection against stains, fading, and weather damage while bringing out the rich colors of your hardscape.",
+    features: [
+      "Premium penetrating or topical sealant options",
+      "Color-enhancing formulations available",
+      "Professional surface preparation and cleaning",
+      "Even application for consistent coverage",
+      "UV protection and weather resistance",
+    ],
+    benefits: [
+      "Enhances and protects natural paver colors",
+      "Resists oil, water, and other common stains",
+      "Provides UV protection to prevent fading",
+      "Extends paver lifespan by up to 10 years",
+      "Easier maintenance and cleaning",
+    ],
+    image: "/images/services/Sealing Pavers.webp",
+    gallery: [
+      "/images/services/sealing-pavers-1.jpg",
+      "/images/services/sealing-pavers-2.jpg",
+      "/images/services/sealing-pavers-3.jpg",
+    ],
+    faqs: [
+      {
+        question: "How long does paver sealing last?",
+        answer:
+          "Quality paver sealants typically last 3-5 years before reapplication is needed, depending on traffic levels and weather exposure.",
+      },
+      {
+        question: "Will sealing change the appearance of my pavers?",
+        answer:
+          "Sealing can enhance the natural colors of your pavers and may provide a subtle sheen. We offer both natural-look and color-enhancing sealant options.",
+      },
+      {
+        question: "How soon can I use my patio after sealing?",
+        answer:
+          "Most sealants require 24-48 hours to fully cure. We'll provide specific timing based on the product used and weather conditions.",
       },
     ],
   },
@@ -300,7 +348,7 @@ export const services: Service[] = [
     id: "uneven-pavers",
     label: "Uneven Pavers Ottawa",
     href: "/services/uneven-pavers",
-    category: "Pavers",
+    category: "Interlock Pavers",
     shortDescription:
       "Repair and releveling services for uneven paver installations.",
     longDescription:
@@ -347,7 +395,7 @@ export const services: Service[] = [
     id: "damaged-pavers",
     label: "Damaged Pavers Ottawa",
     href: "/services/damaged-pavers",
-    category: "Pavers",
+    category: "Interlock Pavers",
     shortDescription:
       "Replacement and repair of cracked, chipped, or stained pavers.",
     longDescription:
@@ -394,7 +442,7 @@ export const services: Service[] = [
     id: "polymeric-sand",
     label: "Polymeric Sand Ottawa",
     href: "/services/polymeric-sand",
-    category: "Pavers",
+    category: "Interlock Pavers",
     shortDescription:
       "Professional application of polymeric sand for paver joints.",
     longDescription:
@@ -623,6 +671,57 @@ export const services: Service[] = [
         question: "How long do surfaces take to dry after steam cleaning?",
         answer:
           "Most surfaces dry within 1-6 hours, depending on the material, ambient temperature, humidity, and air circulation.",
+      },
+    ],
+  },
+  {
+    id: "re-sanding-sealing",
+    label: "Resanding & Sealing Ottawa",
+    href: "/services/re-sanding-sealing",
+    category: "Interlock Pavers",
+    shortDescription:
+      "Complete paver restoration with professional resanding and sealing services.",
+    longDescription:
+      "Our comprehensive paver resanding and sealing service combines both essential maintenance steps in one complete package. We remove old joint sand, apply premium polymeric sand, and finish with high-quality sealant to provide maximum protection and enhancement for your patio, walkway, or driveway.",
+    features: [
+      "Complete joint sand removal and replacement",
+      "Premium polymeric sand application",
+      "Professional surface preparation and cleaning",
+      "Premium penetrating or topical sealants",
+      "Color-enhancing formulations to bring out natural beauty",
+      "UV protection and weather resistance",
+    ],
+    benefits: [
+      "Complete restoration in one comprehensive service",
+      "Extends paver lifespan by up to 10 years",
+      "Prevents weed and moss growth between pavers",
+      "Enhances and protects natural paver colors",
+      "Resists oil, water, and other stains",
+      "Protects against freeze-thaw damage in Ottawa winters",
+    ],
+    image: "/images/services/Sealing Pavers.webp",
+    gallery: [
+      "/images/services/paver-sealing-1.jpg",
+      "/images/services/paver-sealing-2.jpg",
+      "/images/services/paver-sealing-3.jpg",
+    ],
+    faqs: [
+      {
+        question: "What's included in the resanding and sealing service?",
+        answer:
+          "Our complete service includes removal of old joint sand, thorough cleaning, application of premium polymeric sand, and professional sealing with your choice of sealant types.",
+      },
+      {
+        question:
+          "How often should the complete resanding and sealing be done?",
+        answer:
+          "We recommend the complete resanding and sealing service every 3-5 years, depending on usage and exposure to elements.",
+      },
+      {
+        question:
+          "Is it more cost-effective than doing the services separately?",
+        answer:
+          "Yes, our combined service offers better value than scheduling resanding and sealing separately, plus ensures optimal results with proper timing between steps.",
       },
     ],
   },

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Contact Form Submission - PCF</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #292524;
+        background-color: #f5f5f4;
+      }
+
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .header {
+        background: linear-gradient(135deg, #d6781c 0%, #c2410c 100%);
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
+      }
+
+      .logo {
+        width: 120px;
+        height: auto;
+        margin-bottom: 15px;
+        max-width: 100%;
+      }
+
+      .header h1 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      .header p {
+        font-size: 16px;
+        opacity: 0.9;
+      }
+
+      .content {
+        padding: 30px 20px;
+      }
+
+      .form-section {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 25px;
+        margin: 20px 0;
+        border-left: 4px solid #d6781c;
+      }
+
+      .form-section h2 {
+        color: #292524;
+        font-size: 20px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #d6781c;
+        padding-bottom: 8px;
+      }
+
+      .info-row {
+        display: table;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      .info-label {
+        display: table-cell;
+        font-weight: bold;
+        color: #292524;
+        width: 120px;
+        vertical-align: top;
+        padding-right: 15px;
+      }
+
+      .info-value {
+        display: table-cell;
+        color: #374151;
+        word-wrap: break-word;
+      }
+
+      .message-box {
+        background-color: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+        padding: 15px;
+        margin-top: 10px;
+        white-space: pre-wrap;
+        line-height: 1.5;
+      }
+
+      .cta-section {
+        text-align: center;
+        margin: 30px 0;
+        padding: 25px;
+        background-color: #f9fafb;
+        border-radius: 8px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background-color: #d6781c;
+        color: white;
+        text-decoration: none;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      .cta-button:hover {
+        background-color: #c2410c;
+      }
+
+      .footer {
+        background-color: #292524;
+        color: white;
+        padding: 25px 20px;
+        text-align: center;
+      }
+
+      .footer p {
+        margin-bottom: 10px;
+        opacity: 0.9;
+      }
+
+      .contact-info {
+        font-size: 14px;
+        opacity: 0.8;
+      }
+
+      .divider {
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          #d6781c,
+          transparent
+        );
+        margin: 20px 0;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .email-container {
+          margin: 0;
+          border-radius: 0;
+        }
+
+        .header {
+          padding: 20px 15px;
+        }
+
+        .logo {
+          width: 100px;
+          margin-bottom: 12px;
+        }
+
+        .header h1 {
+          font-size: 24px;
+        }
+
+        .content {
+          padding: 20px 15px;
+        }
+
+        .form-section {
+          padding: 20px;
+          margin: 15px 0;
+        }
+
+        .info-row {
+          display: block;
+          margin-bottom: 12px;
+        }
+
+        .info-label {
+          display: block;
+          width: 100%;
+          margin-bottom: 5px;
+          padding-right: 0;
+        }
+
+        .info-value {
+          display: block;
+        }
+
+        .cta-section {
+          padding: 20px;
+        }
+
+        .footer {
+          padding: 20px 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <!-- Header -->
+      <div class="header">
+        <img
+          src="https://www.pcfottawa.com/images/pfc.png"
+          alt="PCF Logo"
+          class="logo"
+        />
+        <h1>📧 New Contact Form Submission</h1>
+        <p>PCF - Precision Contracting & Flooring</p>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <p style="font-size: 16px; color: #374151; margin-bottom: 20px">
+          You've received a new contact form submission from your website. Here
+          are the details:
+        </p>
+
+        <div class="divider"></div>
+
+        <!-- Customer Information -->
+        <div class="form-section">
+          <h2>👤 Customer Information</h2>
+
+          <div class="info-row">
+            <div class="info-label">Name:</div>
+            <div class="info-value">{{name}}</div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-label">Email:</div>
+            <div class="info-value">
+              <a
+                href="mailto:{{from_email}}"
+                style="color: #d6781c; text-decoration: none"
+              >
+                {{email}}
+              </a>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-label">Phone:</div>
+            <div class="info-value">
+              <a
+                href="tel:{{from_phone}}"
+                style="color: #d6781c; text-decoration: none"
+              >
+                {{phone}}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Message Section -->
+        <div class="form-section">
+          <h2>💬 Customer Message</h2>
+          <div class="message-box">{{message}}</div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+          <p style="margin-bottom: 15px; color: #374151; font-size: 16px">
+            <strong>Ready to respond to this inquiry?</strong>
+          </p>
+          <a
+            href="mailto:{{from_email}}?subject=Re: Your Inquiry to PCF&body=Hi {{from_name}},%0D%0A%0D%0AThank you for contacting PCF. "
+            class="cta-button"
+          >
+            📧 Reply to Customer
+          </a>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Quick Info -->
+        <div
+          style="
+            background-color: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+          "
+        >
+          <p style="color: #92400e; margin: 0; font-size: 14px">
+            <strong>⚡ Quick Tip:</strong> Responding within 1 hour increases
+            your chance of converting this lead by 7x!
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p><strong>PCF - Precision Contracting & Flooring</strong></p>
+        <p>Quality Flooring Solutions in Ottawa</p>
+        <div class="contact-info">
+          <p>📞 (613) 914-6260 | 📧 pcfottawa@gmail.com</p>
+          <p>🌐 www.pcfottawa.com</p>
+          <p style="margin-top: 15px; font-size: 12px; opacity: 0.7">
+            This email was automatically generated from your website contact
+            form.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

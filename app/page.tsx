@@ -3,6 +3,7 @@ import FeaturedServices from "../components/FeaturedServices";
 import Testimonials from "../components/Testimonials";
 import ProjectShowcase from "../components/ProjectShowcase";
 import WhyChooseUs from "../components/WhyChooseUs";
+import GoogleReviews from "../components/GoogleReviews";
 import CallToAction from "../components/CallToAction";
 import AEOContent from "../components/AEOContent";
 import { businessProfile } from "@/data/businessProfile";
@@ -82,7 +83,8 @@ export default function Home() {
       <FeaturedServices />
       <WhyChooseUs />
       <ProjectShowcase />
-      <Testimonials />
+      <GoogleReviews />
+      {/* <Testimonials /> */}
       <CallToAction />
     </>
   );
