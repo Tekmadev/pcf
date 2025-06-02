@@ -5,7 +5,7 @@ export default function Map() {
     <div className="bg-white rounded-xl shadow-md overflow-hidden">
       <div className="w-full h-[400px]">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d359537.0372323226!2d-75.8002569!3d45.25015655000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce05b25f5113af%3A0x8a6a51e131dd15ed!2sOttawa%2C%20ON!5e0!3m2!1sen!2sca!4v1744350677941!5m2!1sen!2sca"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5598.427273634482!2d-75.6324656!3d45.4453509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0ff87e4374df%3A0xe472527753d3566a!2s840%20Montr%C3%A9al%20Rd%2C%20Ottawa%2C%20ON%20K1K%204W3!5e0!3m2!1sen!2sca!4v1748820600085!5m2!1sen!2sca"
           width="100%"
           height="100%"
           style={{ border: 0 }}

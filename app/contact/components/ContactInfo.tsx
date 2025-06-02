@@ -14,7 +14,7 @@ export default function ContactInfo() {
 
       <div className="space-y-6">
         {/* Address ------------------------------------------------------------------------------ */}
-        {/* <div className="flex items-start">
+        <div className="flex items-start">
           <div className="mr-4 text-[#d6781c]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ export default function ContactInfo() {
               {businessProfile.address.postalCode}
             </p>
           </div>
-        </div> */}
+        </div>
 
         {/* Phone ------------------------------------------------------------------------------ */}
         <div className="flex items-start">

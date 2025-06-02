@@ -14,8 +14,13 @@ export const metadata = {
   description: "Read our latest blog post about flooring and home improvement.",
 };
 
-export default function BlogPostPage({ params }: { params: any }) {
-  const post = getPostById(params.id);
+export default async function BlogPostPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const resolvedParams = await params;
+  const post = getPostById(resolvedParams.id);
 
   if (!post) {
     notFound();

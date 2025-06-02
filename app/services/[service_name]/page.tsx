@@ -19,8 +19,13 @@ export function generateStaticParams() {
 }
 
 // Generate dynamic metadata for each service
-export async function generateMetadata({ params }: { params: any }) {
-  const service = getServiceById(params.service_name);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ service_name: string }>;
+}) {
+  const resolvedParams = await params;
+  const service = getServiceById(resolvedParams.service_name);
 
   if (!service) {
     return {
@@ -51,12 +56,13 @@ export async function generateMetadata({ params }: { params: any }) {
   });
 }
 
-export default function ServicePage({
+export default async function ServicePage({
   params,
 }: {
-  params: any; // Changed from { service_name: string } to any
+  params: Promise<{ service_name: string }>;
 }) {
-  const service = getServiceById(params.service_name);
+  const resolvedParams = await params;
+  const service = getServiceById(resolvedParams.service_name);
 
   if (!service) {
     notFound();

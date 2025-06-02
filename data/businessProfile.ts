@@ -10,12 +10,12 @@ export const businessProfile = {
   },
   email: "pcfottawa@gmail.com",
   address: {
-    street: "123 Main Street",
+    street: "840 Montréal Rd",
     city: "Ottawa",
     province: "ON",
-    postalCode: "K1A 0B1",
+    postalCode: "K1K 4W3",
     country: "Canada",
-    full: "123 Main Street, Ottawa, ON K1A 0B1, Canada",
+    full: "840 Montréal Rd, Ottawa, ON K1K 4W3, Canada",
   },
   serviceArea: {
     primary: "Ottawa",

@@ -49,7 +49,7 @@ const ProjectShowcase = () => {
                     {project.description}
                   </p>
 
-                  <div className="transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <div className="transform translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-300">
                     <Link
                       href={`/projects/${project.id}`}
                       className="inline-block text-white hover:text-[#d6781c] font-medium transition-colors"
