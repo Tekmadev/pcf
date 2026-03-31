@@ -59,7 +59,7 @@ export default function ServiceSEO({ service }: ServiceSEOProps) {
         <div>
           <h3>Service Overview</h3>
           <p>
-            PCF (Precision Contracting & Flooring) provides professional{" "}
+            PCF (Precision Contracting & Foundation) provides professional{" "}
             {service.label.toLowerCase()}
             services in Ottawa, Ontario, Canada. We are a licensed and insured
             contractor specializing in{" "}

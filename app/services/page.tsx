@@ -3,7 +3,7 @@ import Image from "next/image";
 import { services, getAllServiceCategories } from "@/data/services";
 
 export const metadata = {
-  title: "Our Services | PCF - Precision Contracting & Flooring",
+  title: "Our Services | PCF - Precision Contracting & Foundation",
   description:
     "Browse our comprehensive range of flooring, cleaning, and home improvement services in Ottawa. Quality craftsmanship backed by years of experience.",
 };
@@ -15,8 +15,18 @@ export default function ServicesPage() {
     <div className="bg-background min-h-screen">
       {/* Hero Section */}
       <div className="relative bg-secondary py-20 md:py-28">
-        <div className="absolute inset-0 bg-black/30 z-0"></div>
-        <div className="container mx-auto px-4 relative z-10">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/services/Pressure Washing.webp"
+            alt="Professional home services background"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
+        <div className="container mx-auto px-4 relative z-20">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Our Professional <span className="text-[#d6781c]">Services</span>

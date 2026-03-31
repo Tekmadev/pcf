@@ -87,4 +87,4 @@ If you need help with setup, contact the development team!
 
 ---
 
-**Created for PCF - Precision Contracting & Flooring**
+**Created for PCF - Precision Contracting & Foundation**

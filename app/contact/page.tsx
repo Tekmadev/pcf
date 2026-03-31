@@ -4,9 +4,9 @@ import Map from "./components/Map";
 import EmailJSInit from "./components/EmailJSInit";
 
 export const metadata = {
-  title: "Contact Us | PCF - Precision Contracting & Flooring",
+  title: "Contact Us | PCF - Precision Contracting & Foundation",
   description:
-    "Get in touch with Precision Contracting & Flooring for all your home and commercial improvement needs in Ottawa",
+    "Get in touch with Precision Contracting & Foundation for all your home and commercial improvement needs in Ottawa",
 };
 
 export default function ContactPage() {

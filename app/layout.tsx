@@ -16,7 +16,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   ...defaultMetadata,
   title:
-    "PCF - Precision Contracting & Flooring | Ottawa's Trusted Flooring Experts",
+    "PCF - Precision Contracting & Foundation | Ottawa's Trusted Flooring Experts",
   description:
     "Ottawa's premier flooring and contracting company. Professional hardwood, carpet, tile, vinyl installation, epoxy flooring, and home renovation services. Licensed, insured, free quotes.",
   icons: {
@@ -68,7 +68,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "@id": "https://www.pcfottawa.com/#organization",
-              name: "PCF - Precision Contracting & Flooring",
+              name: "PCF - Precision Contracting & Foundation",
               alternateName: "PCF",
               url: "https://www.pcfottawa.com",
               logo: "https://www.pcfottawa.com/favicon/android-chrome-512x512.png",
@@ -102,7 +102,7 @@ export default function RootLayout({
               "@type": "WebSite",
               "@id": "https://www.pcfottawa.com/#website",
               url: "https://www.pcfottawa.com",
-              name: "PCF - Precision Contracting & Flooring",
+              name: "PCF - Precision Contracting & Foundation",
               description: "Ottawa's trusted flooring and contracting experts",
               publisher: {
                 "@id": "https://www.pcfottawa.com/#organization",

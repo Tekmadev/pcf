@@ -9,7 +9,7 @@ const testimonials: Testimonial[] = [
     name: "Sarah Johnson",
     role: "Residential Client",
     content:
-      "Precision Contracting & Flooring transformed our outdated kitchen into a stunning, functional space that has become the heart of our home. Their attention to detail and craftsmanship is unmatched, and they went above and beyond to ensure we were happy with every aspect of the project.",
+      "Precision Contracting & Foundation transformed our outdated kitchen into a stunning, functional space that has become the heart of our home. Their attention to detail and craftsmanship is unmatched, and they went above and beyond to ensure we were happy with every aspect of the project.",
   },
   {
     name: "Robert Chen",

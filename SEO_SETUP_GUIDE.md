@@ -88,7 +88,7 @@ firebase deploy
 ```json
 {
   "@type": "LocalBusiness",
-  "name": "PCF - Precision Contracting & Flooring",
+  "name": "PCF - Precision Contracting & Foundation",
   "address": {
     "addressLocality": "Ottawa",
     "addressRegion": "ON"

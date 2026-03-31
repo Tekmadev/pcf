@@ -10,7 +10,7 @@ export default function StorySection() {
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#d6781c]/20 rounded-full"></div>
               <Image
                 src="/images/stockPics/flooring2.webp"
-                alt="Precision Contracting & Flooring team"
+                alt="Precision Contracting & Foundation team"
                 width={600}
                 height={450}
                 className="rounded-lg shadow-lg relative z-10"
@@ -31,12 +31,12 @@ export default function StorySection() {
             </div>
 
             <p className="text-secondary/90 mb-6">
-              Precision Contracting & Flooring began with a simple yet powerful
-              vision: to bring exceptional craftsmanship and uncompromising
-              quality to every home improvement project in Ottawa. Founded by
-              master craftsman Michael Thompson after 5 years in the industry,
-              PCF was born from the frustration of seeing too many projects
-              completed with shortcuts and compromises.
+              Precision Contracting & Foundation began with a simple yet
+              powerful vision: to bring exceptional craftsmanship and
+              uncompromising quality to every home improvement project in
+              Ottawa. Founded by master craftsman Michael Thompson after 5 years
+              in the industry, PCF was born from the frustration of seeing too
+              many projects completed with shortcuts and compromises.
             </p>
 
             <p className="text-secondary/90 mb-6">

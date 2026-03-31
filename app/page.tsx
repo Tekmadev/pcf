@@ -52,7 +52,7 @@ export default function Home() {
     <>
       <AEOContent
         title="Flooring and Contracting Services in Ottawa"
-        businessName="PCF (Precision Contracting & Flooring)"
+        businessName="PCF (Precision Contracting & Foundation)"
         location="Ottawa"
         qaContent={homepageQAContent}
         contextInfo={{
@@ -83,7 +83,7 @@ export default function Home() {
       <FeaturedServices />
       <WhyChooseUs />
       <ProjectShowcase />
-      <GoogleReviews />
+      {/* <GoogleReviews /> */}
       {/* <Testimonials /> */}
       <CallToAction />
     </>

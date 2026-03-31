@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PCF - Precision Contracting & Flooring",
+  title: "PCF - Precision Contracting & Foundation",
   description:
     "Your trusted partner for all home and commercial improvement needs in Ottawa",
   icons: {

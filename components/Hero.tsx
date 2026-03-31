@@ -12,10 +12,12 @@ const Hero = () => {
             WE'RE THE BEST HOME SERVICE COMPANY IN OTTAWA
           </h2>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary mb-6 leading-tight">
-            PRECISION CONTRACTING & FLOORING SERVICES
+            PRECISION CONTRACTING & FOUNDATION SERVICES
           </h1>
           <p className="text-secondary-light mb-8 max-w-lg">
-            <span className="font-bold">Precision Contracting & Flooring</span>{" "}
+            <span className="font-bold">
+              Precision Contracting & Foundation
+            </span>{" "}
             is a premier home service company specializing in comprehensive
             renovation and maintenance services. We transform your home with
             expert flooring installations, custom painting, and full-scale
@@ -36,7 +38,7 @@ const Hero = () => {
           <div className="aspect-ratio-1 bg-gray-200 rounded-full overflow-hidden h-72 w-72 md:h-106 md:w-106 mx-auto relative">
             <Image
               src="/images/stockPics/flooring1.webp"
-              alt="PRECISION CONTRACTING & FLOORING SERVICES IN OTTAWA"
+              alt="PRECISION CONTRACTING & FOUNDATION SERVICES IN OTTAWA"
               fill
               className="object-cover"
               priority

@@ -1,6 +1,6 @@
 // Business information that can be updated in one place
 export const businessProfile = {
-  name: "PCF - Precision Contracting & Flooring",
+  name: "PCF - Precision Contracting & Foundation",
   shortName: "PCF",
   tagline: "Ottawa's Trusted Flooring and Contracting Experts",
   phone: {
